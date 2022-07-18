@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
         integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
 
     <link rel="stylesheet" href="./sass/style.css">
 </head>
@@ -23,23 +24,24 @@
 <body>
     <!-- header start -->
     <header class="general-header">
-        <div class="container px-4">
-            <div class="header-top">
-                <div class="row align-items-center">
-                    <div class="col-lg-4">
+        <div class="header-top">
+            <div class="container">
+                <div class="row align-items-center justify-content-between">
+                    <div class="col-md-4  col-3 d-lg-none  d-md-flex ">
+                        <button class="nav-menu-btn"><i class="fa-solid fa-bars-staggered fa-2x"></i></button>
+                    </div>
+                    <div class="col-md-3 d-lg-flex justify-content-evenly d-none">
                         <button class="reservation-btn">Rezervasiya</button>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-md-4 col-6">
                         <div class="logo-content">
                             <a href="./index.html" class="header-logo">
                                 <img src="./img/logo/logo (5).png" alt="header_logo">
                             </a>
                         </div>
                     </div>
-                    <div class="col-lg-1 d-enone">
-                        <button class="nav-menu-btn"><i class="fas fa-bar"></i></button>
-                    </div>
-                    <div class="col-lg-3 d-flex justify-content-end">
+
+                    <div class="col-md-4  col-3  d-flex justify-content-md-end">
                         <div class="header-right-block">
                             <ul class="header-social-list">
                                 <li><a href="" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
@@ -50,8 +52,8 @@
                             </ul>
                             <div class="search-area">
                                 <form action="">
-                                    <input type="text" placeholder="Axtar">
-                                    <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                                    <input type="text" placeholder="Axtar" class="search-input">
+                                    <button class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
                                 </form>
                             </div>
                         </div>
@@ -59,68 +61,89 @@
 
                 </div>
             </div>
-            <div class="header-bottom">
-                <nav class="nav-menu">
-                    <ul class="nav-list">
-                        <li class="nav-item"><a href="./about.html" class="nav-link">Haqqımızda</a></li>
-                        <li class="nav-item"><a href="./branches.html" class="nav-link">Filiallar</a></li>
-                        <li class="nav-item"><a href="" class="nav-link">Menyu</a></li>
-                        <li class="nav-item"><a href="" class="nav-link">Xəbərlər</a></li>
-                        <li class="nav-item"><a href="" class="nav-link">Rəylər</a></li>
-                        <li class="nav-item"><a href="" class="nav-link">Galereya</a></li>
-                        <li class="nav-item"><a href="" class="nav-link">Əlaqə</a></li>
-                    </ul>
-                </nav>
+        </div>
+        <div class="header-bottom-content">
+            <div class="bg-overlay"></div>
+            <div class="header-bottom hedaer-mobile-menu">
+                <div class="container">
+                    <div class="row align-items-center justify-content-between">
+
+                        <div class="col-6">
+                            <a href="./index.html" class="d-lg-none d-md-block header-sidebar-logo"><img
+                                    src="./img/logo/logo (5).png" alt=""></a>
+                        </div>
+                        <div class="col-6 justify-content-end d-flex d-md-flex d-lg-none">
+                            <div class="menu-close-icon">
+                                <i class="fas fa-times"></i>
+                            </div>
+                        </div>
+
+                        <div class="col-12 ">
+                            <nav class="nav-menu">
+                                <ul class="nav-list">
+                                    <li class="nav-item"><a href="./about.html" class="nav-link active">Haqqımızda</a></li>
+                                    <li class="nav-item"><a href="./branches.html" class="nav-link">Filiallar</a></li>
+                                    <li class="nav-item"><a href="" class="nav-link">Menyu</a></li>
+                                    <li class="nav-item"><a href="" class="nav-link">Xəbərlər</a></li>
+                                    <li class="nav-item"><a href="" class="nav-link">Rəylər</a></li>
+                                    <li class="nav-item"><a href="" class="nav-link">Galereya</a></li>
+                                    <li class="nav-item"><a href="" class="nav-link">Əlaqə</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="col-12 d-flex justify-content-center mb-3">
+                            <div class="d-lg-none d-md-block">
+                                <button class="reservation-btn">Rezervasiya</button>
+                            </div>
+                        </div>
+                        <div class="col-12 border-top pt-4 d-md-flex justify-content-center d-lg-none">
+                            <ul class="header-social-list ">
+                                <li><a href="" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                <li><a href="" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                                <li><a href="" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
+                                <li><a href="" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                                <li><a href="" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
-    <!-- header end -->
+    <!-- header end-->
     <!-- banner start -->
-    <section class="banner-section">
+    <section class="banner-section banner-section-2">
         <div class="banner-carousel owl-carousel owl-theme">
             <div class="slider-item">
-
-                <div class="slide-content">
-                    <h1>ƏN DADLI YEMƏKLƏRİN <br />
-                        ÜNVANI</h1>
-                    <button>Ətraflı</button>
-                </div>
             </div>
             <div class="slider-item">
-
-                <div class="slide-content">
-                    <h1>ƏN DADLI YEMƏKLƏRİN <br />
-                        ÜNVANI</h1>
-                    <button>Ətraflı</button>
-                </div>
             </div>
             <div class="slider-item">
-
-                <div class="slide-content">
-                    <h1>ƏN DADLI YEMƏKLƏRİN <br />
-                        ÜNVANI</h1>
-                    <button>Ətraflı</button>
-                </div>
             </div>
-
+        </div>
+        <div class="slide-content slide-content-2">
+            <h1 class="text-center">Haqqımızda</h1>
+            <div class="bottom-img">
+                <img src="./img/Group 35.png" alt="img_bottom">
+            </div>
+           <ul>
+            <li><a href="./index.html">Əsas səhifə</a></li>
+            <li><i class="fa-solid fa-angle-right"></i></li>
+            <li><a href="./about.html" class="active">Haqqımızda</a></li>
+           </ul>
         </div>
     </section>
     <!-- banner end -->
-
     <!-- about start -->
     <section class="about-section">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
-                    <div class="about-image">
-                        <img src="./img/umumi-zal.png" alt="about_image">
+                    <div class="about-image" style="background:url('./img/umumi-zal.png') ;">
+
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <h4 class="aabout-title">Haqqımızda</h4>
-                    <div class="bottom-img">
-                        <img src="./img/Group 10.png" alt="img_bottom">
-                    </div>
                     <p class="about-text">
                         Başkent Restoran və Şirniyyat Evi 2004-cü ildən dəyərli müştərilərinin xidmətindədir. Bakı
                         şəhərində Əcəmi, 28 may, Nərimanov şöbələri olmaqla 3 restoran və İnşaatçılar şöbəsində isə
@@ -129,7 +152,7 @@
                         boyu daim ixtisas təlimləri keçmiş personal ilə müştərilərin həm istirahət edəcəyi, həm damaq
                         dadına uyğun yemək çeşidləri ilə zəngin məkanlardan biri olmaqda iddialıdır.
                     </p>
-                    <p>
+                    <p class="about-text">
                         Restoranlar şəbəkəsində həftə içi və həftə sonu olmaqda səhər yeməyi, biznes görüşlərinizin,
                         təqdimatların keçirilməsi üçün ayrıca otaqlar, dostlarınız, həmkarlarınızla çay-kofe guşəsində
                         rahatlıqla söhbət etmə imkanı, həmçinin işdən sonra günün gərginliyi üzərinizdən atmağa kömək
@@ -143,141 +166,81 @@
             </div>
         </div>
     </section>
+    <!-- about end -->
+    <!-- services start -->
     <section class="services-section">
-        <div class="row">
-            <div class="col-lg-12 text-center bg-img">
-                <h4 class="services-title ">
-                    niyə biz?
-                </h4>
-                <div class="bottom-img">
-                    <img src="./img/Group 9.png" alt="img_bottom">
+        <div class="container">
+            <div class="row d-flex justify-content-center text-center">
+                <div class="col-lg-12">
+                    <h4 class="services-title">
+                        niyə biz?
+                    </h4>
+                    <div class="bottom-img">
+                        <img src="./img/Group 9.png" alt="img_bottom">
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div class="bg-img-2">
-            <div class="container">
-                <div class="row justify-content-center">
-
-                    <div class="col-lg-3">
-                        <div class="single-item">
-                            <div class="icon"><img src="./img/Group 1.png" alt="icon"></div>
-                            <h6 class="item-title">Gülərüz xidmət</h6>
-                        </div>
+                <div class="col-lg-3  col-md-6 col-12">
+                    <div class="single-item">
+                        <div class="icon"><img src="./img/Group 1.png" alt="icon"></div>
+                        <h6 class="item-title">Gülərüz xidmət</h6>
                     </div>
-                    <div class="col-lg-3">
-                        <div class="single-item">
-                            <div class="icon"><img src="./img/Group 3.png" alt="icon"></div>
-                            <h6 class="item-title">Dadlı yeməklər</h6>
-                        </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="single-item">
+                        <div class="icon"><img src="./img/Group 3.png" alt="icon"></div>
+                        <h6 class="item-title">Dadlı yeməklər</h6>
                     </div>
-                    <div class="col-lg-3">
-                        <div class="single-item">
-                            <div class="icon"><img src="./img/Group 2.png" alt="icon"></div>
-                            <h6 class="item-title">Ürəkaçan məkan</h6>
-                        </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="single-item">
+                        <div class="icon"><img src="./img/Group 2.png" alt="icon"></div>
+                        <h6 class="item-title">Ürəkaçan məkan</h6>
                     </div>
                 </div>
             </div>
         </div>
 
-        </div>
     </section>
+    <!-- about end -->
+    <!-- services end -->
     <section class="branches-section">
         <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h4 class="branches-title">
+                        filiallar
+                    </h4>
+                    <div class="bottom-img">
+                        <img src="./img/Group 9.png" alt="img_bottom">
+                    </div>
+                </div>
+            </div>
             <div class="owl-carousel owl-theme branches-carousel">
-                <div class="slider-item">
+                <a href="./branches.html" class="slider-item">
                     <div class="slider-item-img">
                         <img src="./img/branches/aciq-hava-mnkanimiz.png" alt="branches_img">
 
                     </div>
                     <div class="slider-item-title">BAŞKENT Nərimanov</div>
-                </div>
-                <div class="slider-item">
+                </a>
+                <a href="./branches.html" class="slider-item">
                     <div class="slider-item-img">
                         <img src="./img/branches/baskent-sirniyyat.png" alt="branches_img">
                     </div>
                     <div class="slider-item-title">BAŞKENT 28 May</div>
-                </div>
-                <div class="slider-item">
+                </a>
+                <a href="./branches.html" class="slider-item">
                     <div class="slider-item-img">
                         <img src="./img/branches/-b837305e161580832659279444010087249.png" alt="branches_img">
                     </div>
                     <div class="slider-item-title">
                         BAŞKENT Memar Əcəmi
                     </div>
-                </div>
+                </a>
             </div>
         </div>
     </section>
     <!-- about end -->
-
-    <!-- menu start -->
-    <section class="menu-section">
-        <div class="row">
-            <div class="col-lg-4 p-0 m-0">
-                <div class="menu-item">
-                    <div class="menu-item-img">
-                        <img src="./img/menu/chumil-photo-TK5VlaGqkZc-unsplash.png" alt="menu_img">
-                    </div>
-                    <div class="menu-text-content">
-                        Nahar menyusu
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 p-0 m-0">
-                <div class="menu-item">
-                    <div class="menu-item-img">
-                        <img src="./img/menu/deva-williamson-S2jw81lfrG0-unsplash.png" alt="menu_img">
-                    </div>
-                    <div class="menu-text-content">
-                        Şirniyyatlar
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 p-0 m-0">
-                <div class="menu-item">
-                    <div class="menu-item-img">
-                        <img src="./img/menu/jay-wennington-N_Y88TWmGwA-unsplash.png" alt="menu_img">
-                    </div>
-                    <div class="menu-text-content">
-                        Salatlar
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 p-0 m-0">
-                <div class="menu-item">
-                    <div class="menu-item-img">
-                        <img src="./img/menu/kobby-mendez-xBFTjrMIC0c-unsplash.png" alt="menu_img">
-                    </div>
-                    <div class="menu-text-content">
-                        İçkilər
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 p-0 m-0">
-                <div class="menu-item">
-                    <div class="menu-item-img">
-                        <img src="./img/menu/megan-bucknall-qav5LFLbSUk-unsplash.png" alt="menu_img">
-                    </div>
-                    <div class="menu-text-content">
-                        Şorbalar
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 p-0 m-0">
-                <div class="menu-item">
-                    <div class="menu-item-img">
-                        <img src="./img/menu/rachel-park-hrlvr2ZlUNk-unsplash.png" alt="menu_img">
-                    </div>
-                    <div class="menu-text-content">
-                        Səhər yeməyi menyusu
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- menu end -->
-
 
     <!-- partners start -->
     <section class="partners-section">
@@ -304,120 +267,24 @@
             </div>
         </div>
     </section>
-    <!-- partners end -->
+    <!-- partners end-->
 
-    <!-- blog start -->
-    <section class="blog-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h4 class="blog-title">Bloglar</h4>
-                    <div class="bottom-img">
-                        <img src="./img/Group 9.png" alt="img_bottom">
-                    </div>
-                </div>
-            </div>
-            <div class="blog-carousel owl-carousel owl-theme">
-
-                <div class="blog-item">
-                    <div class="blog-item-img">
-                        <img src="./img/blog/jay-wennington-N_Y88TWmGwA-unsplash.png" alt="blog-img">
-                    </div>
-                    <div class="blog-item-info">
-                        <h6 class="sub-title">Lorem ipsum dolor sit amet consectetur.</h6>
-                        <p class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem, facere?
-                            Explicabo, nostrum!</p>
-                    </div>
-                </div>
-                <div class="blog-item">
-                    <div class="blog-item-img">
-                        <img src="./img/blog/pablo-merchan-montes-Orz90t6o0e4-unsplash.png" alt="blog-img">
-                    </div>
-                    <div class="blog-item-info">
-                        <h6 class="sub-title">Lorem ipsum dolor sit amet consectetur.</h6>
-                        <p class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem, facere?
-                            Explicabo, nostrum!</p>
-                    </div>
-                </div>
-                <div class="blog-item">
-                    <div class="blog-item-img">
-                        <img src="./img/blog/zakaria-zayane-0uAVsDcyD0M-unsplash.png" alt="blog-img">
-                    </div>
-                    <div class="blog-item-info">
-                        <h6 class="sub-title">Lorem ipsum dolor sit amet consectetur.</h6>
-                        <p class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem, facere?
-                            Explicabo, nostrum!</p>
-                    </div>
-                </div>
-            </div>
-
-
-
-        </div>
-    </section>
-    <!-- blog end -->
-
-    <!-- gallery start -->
-    <section class="gallery-section">
-        <div class="container">
-
-        </div>
-    </section>
-    <!-- gallery end -->
-
-    <!-- testimonial start -->
-    <!-- <section class="testimonial-section">
-       
-            <div class="bg-image"></div>
-            <div class="testimonial-carousel owl-carousel owl-theme">
-                <div class="slider-item">
-                    <div class="slider-item-left">
-                        <div class="slider-img"><img src="./img/testimonial/Group 23.png" alt="testimonial_img"></div>
-                        <div class="review"><i class="fas fa-star"></i></div>
-                    </div>
-                    <div class="slider-item-right">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque a vero impedit sed quos harum.</p>
-                    </div>
-                </div>
-                <div class="slider-item">
-                    <div class="slider-item-left">
-                        <div class="slider-img"><img src="./img/testimonial/Group 23.png" alt="testimonial_img"></div>
-                        <div class="review"><i class="fas fa-star"></i></div>
-                    </div>
-                    <div class="slider-item-right">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque a vero impedit sed quos harum.</p>
-                    </div>
-                </div>
-                <div class="slider-item">
-                    <div class="slider-item-left">
-                        <div class="slider-img"><img src="./img/testimonial/Group 23.png" alt="testimonial_img"></div>
-                        <div class="review"><i class="fas fa-star"></i></div>
-                    </div>
-                    <div class="slider-item-right">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque a vero impedit sed quos harum.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="bg-image-2"></div>
-      
-    </section> -->
-    <!-- testimonial end -->
-
-<div class="map-container mt-5">
-   <div class="container">
-    <div class="row">
-        <div class="col-12 d-flex justify-content-center">
-            <div class="mapouter"><div class="gmap_canvas"><iframe width="830" height="341" id="gmap_canvas" src="https://maps.google.com/maps?q=2880%20Broadway,%20New%20York&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://123movies-to.org"></a><br><style>.mapouter{position:relative;text-align:right;height:341px;width:830px;}</style><a href="https://www.embedgooglemap.net">embedgooglemap.net</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:341px;width:830px;}</style></div></div></div>
-    </div>
-   </div>
-</div>
-<!-- footer start -->
-<footer class="general-footer">
+    <!-- footer start -->
+    <footer class="general-footer">
     <div class="container">
         <div class="footer-top">
             <div class="row">
-               
-                <div class="col-lg-4">
+                <div class="col-lg-3">
+                    <div class="footer-logo"><a href="./index.html"><img src="./img/logo/logo (5).png" alt=""></a></div>
+                    <ul class="footer-social-list">
+                        <li><a href="" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
+                        <li><a href="" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                        <li><a href="" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
+                        <li><a href="" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
                     <div class="footer-block">
                         <h5 class="block-title">Menular</h5>
                       <ul class="nav-list">
@@ -432,24 +299,53 @@
     
                      </div>
                 </div>
-                <div class="col-lg-4">
-                    <div class="footer-logo"><a href="./index.html"><img src="./img/logo/logo (5).png" alt=""></a></div>
-                    <ul class="footer-social-list">
-                        <li><a href=""></a></li>
-                    </ul>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="footer-block">
+                        <h5 class="block-title">Faydalı linklər</h5>
+                      <ul class="nav-list">
+                        <li><a href="">Tez-tez soruşulanlar</a></li>
+                        <li><a href="">Karyera</a></li>
+                        <li><a href="">Xidmət şəbəkəsi</a></li>
+                      </ul>
+    
+                     </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="footer-block">
+                        <h5 class="block-title">Ünvan</h5>
+                      <ul class="address-list">
+                        <li><a href="https://www.google.com/maps?q=baki" target="_blank">
+                            <i class="fa-solid fa-location-dot"></i> Azərbaycan, Bakı ş., 
+                            Əhməd Rəcəbli 15, AZ1028
+                            </a></li>
+                        <li><a href=""><i class="fas fa-phone"></i> (+994) 555 77 00
+                        </a></li>
+                        <li><a href=""><i class="fa-solid fa-envelope"></i>baskent@info.az</a></li>
+                       
+                      </ul>
+    
+                     </div>
                 </div>
                 
+                
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="copyright text-center  pt-4">
+                © 2021 | Bütün hüquqlar qorunur. 
             </div>
         </div>
     </div>
 </footer>
-<!-- footer end -->
+    <!-- footer end -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
         integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
         crossorigin="anonymous"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
     <script src="./js/script.js"></script>
 </body>
 
