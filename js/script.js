@@ -23,9 +23,9 @@ $('.branches-carousel').owlCarousel({
             items: 1,
 
         },
-600:{
-    items:2,
-},
+        600: {
+            items: 2,
+        },
         1000: {
             items: 3,
 
@@ -62,15 +62,15 @@ $('.blog-carousel').owlCarousel({
     responsiveClass: true,
     autoPlay: true,
     responsive: {
-     0:{
-        items:1,
-     },
-    700:{
-        items:2,
-     },
-     1000:{
-        items:3
-     }
+        0: {
+            items: 1,
+        },
+        700: {
+            items: 2,
+        },
+        1000: {
+            items: 3
+        }
     }
 })
 $('.testimonial-carousel').owlCarousel({
@@ -120,3 +120,24 @@ $('[data-fancybox="gallery"]').fancybox({
     loop: false,
     protect: true
 });
+const items = document.querySelector(".items");
+const product_item = document.querySelectorAll(".product-item");
+items.onclick = (selectedItem) => {
+
+    if (selectedItem.target.classList.contains("item")) {
+     
+        selectedItem.target.classList.add("active");
+        items.querySelector(".active").classList.remove("active"); 
+        let filterItems = selectedItem.target.getAttribute("data-name");
+        product_item.forEach(item => {
+            let filterProducts = item.getAttribute("data-name");
+            if (filterItems == filterProducts) {
+                item.classList.add("show");
+                item.classList.remove("hide");
+            } else {
+                item.classList.remove("show");
+                item.classList.add("hide");
+            }
+        })
+    }
+}
