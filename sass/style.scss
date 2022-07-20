@@ -460,16 +460,20 @@ input {
 }
 
 .menu-section {
-
-
-
     .menu-item {
         position: relative;
-        overflow: hidden;
+     
 
+      .menu-item-img-content{
+        overflow: hidden;
         .menu-item-img {
             transition: $transition;
             position: relative;
+           
+            background-size: cover !important;
+            background-repeat: no-repeat !important;
+            background-position: center;
+            height: 300px;
 
             &::after {
                 content: "";
@@ -492,11 +496,9 @@ input {
 
             }
 
-            img {
-                padding: 0;
-                width: 100%;
-            }
+
         }
+      }
 
         .menu-text-content {
             color: $white;
@@ -537,29 +539,29 @@ input {
         }
     }
 }
+.nav {
+    max-width: 700px;
+    margin: 30px auto;
 
-.menu-single-section {
-    .nav {
-        max-width: 700px;
-        margin: 30px auto;
+    .items {
+        @include between;
+        width: 100%;
 
-        .items {
-            @include between;
-            width: 100%;
+        .item {
+            font-size: $font-18px;
+            font-weight: 500;
+            transition: $transition;
 
-            .item {
-                font-size: $font-18px;
-                font-weight: 500;
-                transition: $transition;
-
-                &:hover,
-                &.active {
-                    color: #E5601E;
-                    cursor: pointer;
-                }
+            &:hover,
+            &.active {
+                color: #E5601E;
+                cursor: pointer;
             }
         }
     }
+}
+.menu-single-section {
+   
 
     .products {
         .product-item {
@@ -567,12 +569,16 @@ input {
             border-radius: 5px;
             margin-bottom: 50px;
 
+
             &.hide {
+                animation: animate 0.4s ease-in-out;
                 display: none;
+
             }
 
             &.show {
                 display: block;
+                animation: animate 0.4s ease-in-out;
             }
 
             &:hover {
@@ -943,13 +949,14 @@ input {
 
     .form-control {
         border-radius: 2px;
-       &:focus{
-  box-shadow: none;
-  border-color: #ddd;
-  outline: 1px solid #ddd;
 
-        
-       }
+        &:focus {
+            box-shadow: none;
+            border-color: #ddd;
+            outline: 1px solid #ddd;
+
+
+        }
 
         &.submit-btn {
             background-color: $primary-color;
@@ -973,9 +980,19 @@ input {
         }
     }
 
-}
-
-
+} 
+  .grid {
+    margin: 1rem auto;
+    &-item {
+      width: 250px;
+      height: auto;
+      margin-bottom: 10px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
 @media screen and (max-width:991px) {
     .general-header {
         .reservation-btn {
@@ -1062,12 +1079,9 @@ input {
         }
 
     }
+    .nav {
+        max-width: 650px;
 
-    .menu-single-section {
-        .nav {
-            max-width: 650px;
-
-        }
     }
 }
 
@@ -1170,20 +1184,20 @@ input {
             }
         }
     }
+    .nav {
+        max-width: 550px;
 
-    .menu-single-section {
-        .nav {
-            max-width: 550px;
+        .items {
+            flex-wrap: wrap;
 
-            .items {
-                flex-wrap: wrap;
-
-                .item {
-                    margin-bottom: 10px;
-                    font-size: 16px;
-                }
+            .item {
+                margin-bottom: 10px;
+                font-size: 16px;
             }
         }
+    }
+    .menu-single-section {
+      
 
         .products {
             padding: 0 40px;
@@ -1330,17 +1344,15 @@ input {
         background-image: none;
     }
 
-    .menu-single-section {
-        .nav {
-            max-width: 500px;
+    .nav {
+        max-width: 500px;
 
-            .items {
-                flex-wrap: wrap;
+        .items {
+            flex-wrap: wrap;
 
-                .item {
-                    margin-bottom: 10px;
-                    font-size: 15px;
-                }
+            .item {
+                margin-bottom: 10px;
+                font-size: 15px;
             }
         }
     }
@@ -1480,5 +1492,15 @@ input {
 @keyframes spin {
     100% {
         transform: rotate(360deg)
+    }
+}
+
+@keyframes animate {
+    0% {
+        transform: scale(0.5);
+    }
+
+    100% {
+        transform: scale(1)
     }
 }
