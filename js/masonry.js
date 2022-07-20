@@ -4,7 +4,7 @@
         window.onresize = function () {
             var colWidth = $(".grid-item").width();
         }
-        console.log(colWidth);
+     
 
         var $grid = $(".grid").masonry({
             // options

@@ -1,3 +1,7 @@
+$(window).on('load', function(){ 
+    $(".preloader").addClass("hide")
+});
+
 $('.banner-carousel').owlCarousel({
     loop: false,
     responsiveClass: true,
@@ -100,13 +104,15 @@ $(".menu-close-icon").on("click", () => {
 $(".bg-overlay").on("click", () => {
     $(".header-bottom-content").removeClass("opened");;
 });
-$(".search-btn").on("click", (e) => {
-    $(".search-btn .fa-solid").toggleClass("fa-magnifying-glass");
-    $(".search-btn .fa-solid").toggleClass("fa-times")
-    $(".search-input").toggleClass("show");
-    e.preventDefault();
-    console.log("ewe")
+$(".search-btn-mobile").on("click", () => {
+    
+    $(".form-content-overlay").addClass("show");
+  
 });
+$(".close-search-area").on("click",()=>{
+    $(".form-content-overlay").removeClass("show");
+    
+})
 // Fancybox Config
 $('[data-fancybox="gallery"]').fancybox({
     buttons: [
@@ -121,3 +127,18 @@ $('[data-fancybox="gallery"]').fancybox({
     protect: true
 });
 
+
+$(window).on("scroll",function(){
+   if(  $(this).scrollTop()>=120){
+    $(".header-fixed").addClass("show")
+    $(".up-btn").addClass("show") 
+    $(".up-btn").on("click",function(){
+        $(window).scrollTop(0)
+    }) 
+   }else{
+    $(".up-btn").removeClass("show")
+    $(".header-fixed").removeClass("show")
+   }
+  
+    
+})
