@@ -21,7 +21,258 @@
         type="text/css" media="screen" />
     <link rel="stylesheet" href="./sass/style.css">
 </head>
-
+<style>
+    body{margin-top:20px;}
+.filtering {
+    margin-bottom: 40px;
+}
+.filtering span {
+    border-bottom: 2px solid transparent;
+    color: #282b2d;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-right: 20px;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+.filtering span:last-child {
+    margin: 0;
+}
+.filtering .active {
+    border-color: #ccde02;
+    color: #ccde02;
+}
+.portfolio-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+.portfolio-overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    transition: all 500ms ease;
+}
+.portfolio-wrapper .portfolio-image img {
+    transform: scale(1.2);
+    will-change: transform;
+    transition: all 0.5s ease;
+    width: 100%;
+}
+.portfolio-wrapper:hover .portfolio-image img {
+    transform: none;
+}
+.portfolio-overlay:before {
+    position: absolute;
+    display: inline-block;
+    top: 15px;
+    right: 15px;
+    bottom: 15px;
+    left: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.36);
+    content: "";
+    opacity: 0;
+    transition: all 0.5s ease;
+    transform: scale(0.85);
+}
+.portfolio-overlay .portfolio-content {
+    position: absolute;
+    bottom: 50%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    padding: 0 35px;
+}
+.portfolio-content h4 {
+    color: #000;
+    font-weight: 600;
+    font-size: 20px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+.portfolio-content p {
+    color: #000;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-bottom: 0;
+}
+.portfolio-content > a {
+    line-height: 42px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: #000;
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 15px;
+    font-weight: 800;
+}
+.portfolio-wrapper:hover .portfolio-overlay {
+    background-color: rgba(204, 222, 2, 0.85);
+}
+.portfolio-wrapper:hover .portfolio-overlay:before {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+}
+.portfolio-wrapper:hover .portfolio-overlay .portfolio-content {
+    transform: translateY(50%);
+    transition: transform 0.5s ease;
+    opacity: 1;
+}
+@media screen and (max-width: 1199px) {
+    .portfolio-content h4 {
+        font-size: 18px;
+    }
+}
+@media screen and (max-width: 991px) {
+    .portfolio-content h4 {
+        margin-bottom: 10px;
+    }
+    .portfolio-content p {
+        font-size: 15px;
+    }
+    .portfolio-content > a {
+        margin-bottom: 10px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .portfolio-content h4 {
+        font-size: 17px;
+    }
+    .portfolio-content p {
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 575px) {
+    .portfolio-content h4 {
+        font-size: 16px;
+    }
+}
+.grid .grid-item {
+    position: relative;
+    overflow: hidden;
+}
+.grid .grid-item .portfolio-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+.grid .grid-item .portfolio-overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    transition: all 500ms ease;
+}
+.grid .grid-item .portfolio-wrapper .portfolio-image img {
+    transform: none;
+    will-change: transform;
+    transition: none;
+    width: 100%;
+}
+.grid .grid-item .portfolio-wrapper:hover .portfolio-image img {
+    transform: none;
+}
+.grid .grid-item .portfolio-overlay:before {
+    position: absolute;
+    display: inline-block;
+    top: 15px;
+    right: 15px;
+    bottom: 15px;
+    left: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.36);
+    content: "";
+    opacity: 0;
+    transition: all 0.5s ease;
+    transform: scale(0.85);
+}
+.grid .grid-item .portfolio-overlay .portfolio-content {
+    position: absolute;
+    bottom: 50%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+}
+.grid .grid-item .portfolio-content h4 {
+    color: #000;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.grid .grid-item .portfolio-content p {
+    color: #000;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-bottom: 0;
+}
+.grid .grid-item .portfolio-content a {
+    line-height: 36px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    color: #000;
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: 800;
+}
+.grid .grid-item .portfolio-wrapper:hover .portfolio-overlay {
+    background-color: rgba(204, 222, 2, 0.85);
+}
+.grid .grid-item .portfolio-wrapper:hover .portfolio-overlay:before {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+}
+.grid .grid-item .portfolio-wrapper:hover .portfolio-overlay .portfolio-content {
+    transform: translateY(50%);
+    transition: transform 0.5s ease;
+    opacity: 1;
+}
+@media screen and (max-width: 1199px) {
+    .grid .grid-item .portfolio-content h4 {
+        font-size: 18px;
+    }
+}
+@media screen and (max-width: 991px) {
+    .grid .grid-item .portfolio-content h4 {
+        margin-bottom: 10px;
+    }
+    .grid .grid-item .portfolio-content p {
+        font-size: 15px;
+    }
+    .grid .grid-item .portfolio-content a {
+        margin-bottom: 10px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .grid .grid-item .portfolio-content h4 {
+        font-size: 17px;
+    }
+    .grid .grid-item .portfolio-content p {
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 575px) {
+    .grid .grid-item .portfolio-content h4 {
+        font-size: 16px;
+    }
+    .grid .grid-item .portfolio-overlay:before {
+        top: 10px;
+        right: 10px;
+        bottom: 10px;
+        left: 10px;
+    }
+}
+</style>
 <body>
     <!-- Preloader start-->
     <div class="preloader">
@@ -40,7 +291,7 @@
                         <button class="nav-menu-btn"><i class="fa-solid fa-bars fa-2x"></i></button>
                     </div>
                     <div class="col-md-3 d-lg-flex justify-content-evenly d-none">
-                        <button class="reservation-btn">Rezervasiya</button>
+                        <a href="tel:#212" class="reservation-btn">Rezervasiya</a>
                     </div>
                     <div class="col-md-4 col-6">
                         <div class="logo-content">
@@ -49,13 +300,13 @@
                             </a>
                         </div>
                     </div>
-
+    
                     <div class="col-md-4  col-3  d-flex justify-content-end">
                         <div class="header-right-block">
                             <ul class="header-social-list">
+                                  <li><a href=""><img src="./img/tripadvisor-xxl.png" alt="icon"></a></li>
                                 <li><a href="" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                <li><a href="" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></li>
-                                <li><a href="" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
+                                <li><a href="" target="_blank"><i class="fa-brands fa-tiktok"></i></a></li>
                                 <li><a href="" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
                                 <li><a href="" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
                             </ul>
@@ -66,7 +317,7 @@
                                 </form>
                             </div>
                             <div class="search-area-mobile">
-
+                               
                                 <div class="form-content-overlay">
                                     <div class="close-search-area">
                                         <i class="fas fa-times"></i>
@@ -80,7 +331,7 @@
                             </div>
                         </div>
                     </div>
-
+    
                 </div>
             </div>
         </div>
@@ -89,7 +340,7 @@
             <div class="header-bottom hedaer-mobile-menu">
                 <div class="container">
                     <div class="row align-items-center justify-content-between">
-
+    
                         <div class="col-6">
                             <a href="./index.html" class="d-lg-none d-md-block header-sidebar-logo"><img
                                     src="./img/logo/logo (5).png" alt=""></a>
@@ -99,34 +350,33 @@
                                 <i class="fas fa-times"></i>
                             </div>
                         </div>
-
+    
                         <div class="col-12 ">
-
+    
                             <nav class="nav-menu">
                                 <ul class="nav-list">
                                     <li class="nav-item"><a href="./about.html" class="nav-link">Haqqımızda</a></li>
                                     <li class="nav-item"><a href="./branches.html" class="nav-link">Filiallar</a></li>
                                     <li class="nav-item"><a href="./menu.html" class="nav-link">Menyu</a></li>
+                                    <li class="nav-item"><a href="./gallery.html" class="nav-link active">Galereya</a></li>
                                     <li class="nav-item"><a href="./blog.html" class="nav-link">Xəbərlər</a></li>
                                     <li class="nav-item"><a href="./reviews.html" class="nav-link">Rəylər</a></li>
-                                    <li class="nav-item"><a href="./gallery.html" class="nav-link active">Galereya</a>
-                                    </li>
-                                    <li class="nav-item"><a href="./contact.html" class="nav-link">Əlaqə</a></li>
+                                    <li class="nav-item"><a href="./contact.html" class="nav-link ">Əlaqə</a></li>
                                 </ul>
                             </nav>
-
-
+    
+    
                         </div>
                         <div class="col-12 d-flex justify-content-center mb-3">
                             <div class="d-lg-none d-md-block">
-                                <button class="reservation-btn">Rezervasiya</button>
+                                <a href="tel:#2212" class="reservation-btn">Rezervasiya</a>
                             </div>
                         </div>
                         <div class="col-12 border-top pt-4 d-md-flex justify-content-center d-lg-none">
                             <ul class="header-social-list ">
+                                <li><a href=""><img src="./img/tripadvisor-xxl.png" alt="icon"></a></li>
                                 <li><a href="" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                <li><a href="" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></li>
-                                <li><a href="" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
+                                <li><a href="" target="_blank"><i class="fa-brands fa-tiktok"></i></a></li>
                                 <li><a href="" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
                                 <li><a href="" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
                             </ul>
@@ -148,16 +398,17 @@
                             <li class="nav-item"><a href="./about.html" class="nav-link">Haqqımızda</a></li>
                             <li class="nav-item"><a href="./branches.html" class="nav-link">Filiallar</a></li>
                             <li class="nav-item"><a href="./menu.html" class="nav-link">Menyu</a></li>
+                            <li class="nav-item"><a href="./gallery.html" class="nav-link active">Galereya</a></li>
                             <li class="nav-item"><a href="./blog.html" class="nav-link">Xəbərlər</a></li>
                             <li class="nav-item"><a href="./reviews.html" class="nav-link">Rəylər</a></li>
-                            <li class="nav-item"><a href="./gallery.html" class="nav-link active">Galereya</a></li>
-                            <li class="nav-item"><a href="./contact.html" class="nav-link">Əlaqə</a></li>
+                          
+                            <li class="nav-item"><a href="./contact.html" class="nav-link ">Əlaqə</a></li>
                         </ul>
                     </div>
                     <div class="col-lg-2 d-flex justify-content-end">
-                        <button class="reservation-btn-2">
+                        <a href="tel:#21212" class="reservation-btn-2">
                             Rezervasiya
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -167,11 +418,9 @@
     <!-- banner start -->
     <section class="banner-section banner-section-2">
         <div class="banner-carousel owl-carousel owl-theme">
-            <div class="slider-item">
+            <div class="slider-item" style="  background: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .3)), url('../img/marissa-grootes-u2Lp8tXIcjw-unsplash.png');">
             </div>
-            <div class="slider-item">
-            </div>
-            <div class="slider-item">
+            <div class="slider-item" style="  background: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .3)), url('../img/marissa-grootes-u2Lp8tXIcjw-unsplash.png');">
             </div>
         </div>
         <div class="slide-content slide-content-2">
@@ -189,12 +438,12 @@
     </section>
     <!-- banner end -->
     <!-- gallery start -->
-    <section class="gallery-section">
+    <!-- <section class="gallery-section">
         <div class="container">
             <nav class="nav">
                 <ul class="items">
-                    <li class="item active" data-name="gallery">
-                        Galereya
+                    <li class="item " data-name="gallery">
+                        Foto
                     </li>
                     <li class="item" data-name="video">
                         Videolar
@@ -202,117 +451,348 @@
                 </ul>
             </nav>
             <div class="gallery">
-                <div class="grid product-item show" data-name="gallery">
-                    <div class="grid-item"><a href="./img/gallery/carlos-lindner-sjBYA8dAw54-unsplash.png"><img
-                                src="./img/gallery/carlos-lindner-sjBYA8dAw54-unsplash.png"
-                                alt="Chrysanthemum: nice flower."></a></div>
-                    <div class="grid-item"><a href="./img/gallery/igor-rand-wfM1Fi-kMaY-unsplash.png"><img
-                                src="./img/gallery/igor-rand-wfM1Fi-kMaY-unsplash.png" alt=""></a></div>
-                    <div class="grid-item">
-                        <a href="./img/gallery/patrick-schneider-5xltWMpkN3E-unsplash.png"><img
-                                src="./img/gallery/patrick-schneider-5xltWMpkN3E-unsplash.png" alt=""></a>
-                    </div>
-                    <div class="grid-item"><a href="./img/gallery/shen-liu-2PUwRmJOdNo-unsplash.png"><img
-                                src="./img/gallery/shen-liu-2PUwRmJOdNo-unsplash.png" alt=""></a></div>
-                    <div class="grid-item"><a href="./img/gallery/stefan-johnson-xIFbDeGcy44-unsplash.png"><img
-                                src="./img/gallery/stefan-johnson-xIFbDeGcy44-unsplash.png" alt=""></a></div>
-                    <div class="grid-item"><a href="./img/gallery/rod-long-kImU-9S9uh8-unsplash.png"><img
-                                src="./img/gallery/rod-long-kImU-9S9uh8-unsplash.png" alt=""></a></div>
-                    <div class="grid-item"><a href="./img/gallery/shen-liu-2PUwRmJOdNo-unsplash.png"><img
-                                src="./img/gallery/shen-liu-2PUwRmJOdNo-unsplash.png" alt=""></a></div>
-                    <div class="grid-item"><a href="./img/gallery/patrick-schneider-5xltWMpkN3E-unsplash.png"><img
-                                src="./img/gallery/patrick-schneider-5xltWMpkN3E-unsplash.png" alt=""></a></div>
-                    <div class="grid-item"><a href="./img/gallery/shen-liu-2PUwRmJOdNo-unsplash.png"><img
-                                src="./img/gallery/shen-liu-2PUwRmJOdNo-unsplash.png" alt=""></a></div>
-                    <div class="grid-item"><a href="./img/gallery/carlos-lindner-sjBYA8dAw54-unsplash.png"><img
-                                src="./img/gallery/carlos-lindner-sjBYA8dAw54-unsplash.png" alt=""></a></div>
-                    <div class="grid-item"><a href="./img/gallery/igor-rand-wfM1Fi-kMaY-unsplash.png"><img
-                                src="./img/gallery/igor-rand-wfM1Fi-kMaY-unsplash.png" alt=""></a></div>
-                </div>
+                <div class="grid" >
 
-                <div class="grid product-item " data-name="video">
-
-                    <div class="grid-item">
+                    <div class="grid-item hide product-item" data-name="video">
                         <a href="https://www.youtube.com/embed/lyRtvN5rg-I?start=11"><img
                                 src="./img/gallery/carlos-lindner-sjBYA8dAw54-unsplash.png" alt=""> <i class="fas fa-play"></i></a>
                     </div>
-                    <div class="grid-item">
+                    <div class="grid-item hide product-item" data-name="video">
                         <a href="https://www.youtube.com/embed/lyRtvN5rg-I?start=11"><img
                                 src="./img/gallery/patrick-schneider-5xltWMpkN3E-unsplash.png" alt=""> <i class="fas fa-play"></i></a>
                     </div>
-                    <div class="grid-item">
+                    <div class="grid-item hide product-item" data-name="video">
                         <a href="https://www.youtube.com/embed/lyRtvN5rg-I?start=11"><img
                                 src="./img/gallery/rod-long-kImU-9S9uh8-unsplash.png" alt=""> <i class="fas fa-play"></i></a>
 
                     </div>
-                    <div class="grid-item">
+                    <div class="grid-item hide product-item" data-name="video">
                         <a href="https://www.youtube.com/embed/lyRtvN5rg-I?start=11"><img
                                 src="./img/gallery/carlos-lindner-sjBYA8dAw54-unsplash.png" alt=""> <i class="fas fa-play"></i></a>
                     </div>
-                    <div class="grid-item">
+                    <div class="grid-item hide product-item" data-name="video">
                         <a href="https://www.youtube.com/embed/lyRtvN5rg-I?start=11"><img
                                 src="./img/gallery/paul-griffin-WWST6E8LxeE-unsplash.png" alt="">
                             <i class="fas fa-play"></i></a>
                     </div>
-                    <div class="grid-item">
+                    <div class="grid-item hide product-item" data-name="video">
                         <a href="https://www.youtube.com/embed/lyRtvN5rg-I?start=11"><img
                                 src="./img/gallery/carlos-lindner-sjBYA8dAw54-unsplash.png" alt=""> <i class="fas fa-play"></i></a>
 
                     </div>
-                    <div class="grid-item">
+                    <div class="grid-item hide product-item" data-name="video">
                         <a href="https://www.youtube.com/embed/lyRtvN5rg-I?start=11"><img
                                 src="./img/gallery/shen-liu-2PUwRmJOdNo-unsplash.png" alt=""> <i class="fas fa-play"></i></a>
+                    </div>
+                    
+              
+                    <div class="grid-item show product-item" data-name="gallery"><a href="./img/gallery/carlos-lindner-sjBYA8dAw54-unsplash.png"><img
+                                src="./img/gallery/carlos-lindner-sjBYA8dAw54-unsplash.png"
+                                alt="Chrysanthemum: nice flower."></a></div>
+                    <div class="grid-item show product-item" data-name="gallery"><a href="./img/gallery/igor-rand-wfM1Fi-kMaY-unsplash.png"><img
+                                src="./img/gallery/igor-rand-wfM1Fi-kMaY-unsplash.png" alt=""></a></div>
+                    <div class="grid-item show product-item" data-name="gallery">
+                        <a href="./img/gallery/patrick-schneider-5xltWMpkN3E-unsplash.png"><img
+                                src="./img/gallery/patrick-schneider-5xltWMpkN3E-unsplash.png" alt=""></a>
+                    </div>
+                    <div class="grid-item show product-item" data-name="gallery"><a href="./img/gallery/shen-liu-2PUwRmJOdNo-unsplash.png"><img
+                                src="./img/gallery/shen-liu-2PUwRmJOdNo-unsplash.png" alt=""></a></div>
+                    <div class="grid-item show product-item" data-name="gallery"><a href="./img/gallery/stefan-johnson-xIFbDeGcy44-unsplash.png"><img
+                                src="./img/gallery/stefan-johnson-xIFbDeGcy44-unsplash.png" alt=""></a></div>
+                    <div class="grid-item show product-item" data-name="gallery"><a href="./img/gallery/rod-long-kImU-9S9uh8-unsplash.png"><img
+                                src="./img/gallery/rod-long-kImU-9S9uh8-unsplash.png" alt=""></a></div>
+                    <div class="grid-item show product-item" data-name="gallery"><a href="./img/gallery/shen-liu-2PUwRmJOdNo-unsplash.png"><img
+                                src="./img/gallery/shen-liu-2PUwRmJOdNo-unsplash.png" alt=""></a></div>
+                    <div class="grid-item show product-item" data-name="gallery"><a href="./img/gallery/patrick-schneider-5xltWMpkN3E-unsplash.png"><img
+                                src="./img/gallery/patrick-schneider-5xltWMpkN3E-unsplash.png" alt=""></a></div>
+                    <div class="grid-item show product-item" data-name="gallery"><a href="./img/gallery/shen-liu-2PUwRmJOdNo-unsplash.png"><img
+                                src="./img/gallery/shen-liu-2PUwRmJOdNo-unsplash.png" alt=""></a></div>
+                    <div class="grid-item show product-item" data-name="gallery"><a href="./img/gallery/carlos-lindner-sjBYA8dAw54-unsplash.png"><img
+                                src="./img/gallery/carlos-lindner-sjBYA8dAw54-unsplash.png" alt=""></a></div>
+                    <div class="grid-item show product-item" data-name="gallery"><a href="./img/gallery/igor-rand-wfM1Fi-kMaY-unsplash.png"><img
+                                src="./img/gallery/igor-rand-wfM1Fi-kMaY-unsplash.png" alt=""></a></div>
+                </div>
+
+                
+            </div>
+        </div>
+    </section> -->
+<!-- <section class="hero is-light is-medium">
+   <div class="container">
+    <div class="hero-foot">
+        <nav class="tabs is-boxed is-fullwidth">
+            <div class="container">
+                <ul id="buttonGroup">
+                    <li class="is-active"><a id="all">All Images</a></li>
+                    <li><a id="photo">Foto</a></li>
+                    <li><a id="video">Video</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="grid" id="container">
+        <div class="grid-sizer"></div>
+        <div class="grid-item photo"><img src="./img/gallery/carlos-lindner-sjBYA8dAw54-unsplash.png" alt="gallery-img" /></div>
+        <div class="grid-item photo"><img src="./img/gallery/igor-rand-wfM1Fi-kMaY-unsplash.png" alt="gallery-img" /></div>
+        <div class="grid-item photo"><img src="./img/gallery/patrick-schneider-5xltWMpkN3E-unsplash.png" alt="gallery-img" /></div>
+        <div class="grid-item video"><img src="./img/gallery/rod-long-kImU-9S9uh8-unsplash.png" alt="gallery-img" /></div>
+        <div class="grid-item video"><img src="./img/gallery/paul-griffin-WWST6E8LxeE-unsplash.png" alt="gallery-img" /></div>
+        <div class="grid-item video"><img src="./img/gallery/stefan-johnson-xIFbDeGcy44-unsplash.png" alt="gallery-img" /></div>
+        <div class="grid-item video"><img src="./img/gallery/paul-griffin-WWST6E8LxeE-unsplash.png" alt="gallery-img" /></div>
+        <div class="grid-item video"><img src="./img/gallery/stefan-johnson-xIFbDeGcy44-unsplash.png" alt="gallery-img" /></div>
+
+    </div>
+   </div>
+   
+</section> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha512-Zq2BOxyhvnRFXu0+WE6ojpZLOU2jdnqbrM1hmVdGzyeCa1DgM3X5Q4A/Is9xA1IkbUeDd7755dNNI/PzSf2Pew==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js" integrity="sha512-JRlcvSZAXT8+5SQQAvklXGJuxXTouyq8oIMaYERZQasB8SBDHZaUbeASsJWpk0UUrf89DP3/aefPPrlMR1h1yQ==" crossorigin="anonymous"></script>
+<section>
+    <div class="container">
+        <div class="row no-gutters">
+            <div class="filtering col-sm-12 text-center">
+                <span data-filter="*" class="active">All</span>
+                <span data-filter=".architecture" class="">Architecture</span>
+                <span data-filter=".decor" class="">Decor</span>
+                <span data-filter=".interior" class="">Interior</span>
+            </div>
+            <div class="col-12 text-center w-100">
+                <div class="grid form-row gallery text-center">
+                    <div class="col-lg-4 col-sm-6 mb-2 grid-item interior">
+                        <div class="portfolio-wrapper">
+                            <div class="portfolio-image">
+                                <img src="https://via.placeholder.com/350x550/FF7F50/000000" alt="..." />
+                            </div>
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-content">
+                                    <a class="popimg ml-0" href="#">
+                                        <i class="ti-zoom-in display-24 display-md-23 display-lg-22 display-xl-20"></i>
+                                    </a>
+                                    <h4>Stylish Family Appartment</h4>
+                                    <p>[Interior]</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-2 grid-item decor interior">
+                        <div class="portfolio-wrapper">
+                            <div class="portfolio-image">
+                                <a href="https://via.placeholder.com/350x350/20B2AA/000000">  <img src="https://via.placeholder.com/350x350/20B2AA/000000" alt="..." />ff</a>
+                              
+                            </div>
+                           
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-2 grid-item architecture">
+                        <div class="portfolio-wrapper">
+                            <div class="portfolio-image">
+                                <img src="https://via.placeholder.com/350x350/C71585/000000" alt="..." />
+                            </div>
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-content">
+                                    <a class="popimg ml-0" href="#">
+                                        <i class="ti-zoom-in display-24 display-md-23 display-lg-22 display-xl-20"></i>
+                                    </a>
+                                    <h4>Modern Villa in Belgium</h4>
+                                    <p>[Architecture]</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-2 grid-item interior">
+                        <div class="portfolio-wrapper">
+                            <div class="portfolio-image">
+                                <img src="https://via.placeholder.com/350x550/FF7F50/000000" alt="..." />
+                            </div>
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-content">
+                                    <a class="popimg ml-0" href="#">
+                                        <i class="ti-zoom-in display-24 display-md-23 display-lg-22 display-xl-20"></i>
+                                    </a>
+                                    <h4>Kitchen for Small family</h4>
+                                    <p>[Interior]</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-2 grid-item architecture">
+                        <div class="portfolio-wrapper">
+                            <div class="portfolio-image">
+                                <img src="https://via.placeholder.com/350x350/FFDAB9/000000" alt="..." />
+                            </div>
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-content">
+                                    <a class="popimg ml-0" href="#">
+                                        <i class="ti-zoom-in display-24 display-md-23 display-lg-22 display-xl-20"></i>
+                                    </a>
+                                    <h4>Art Family Residence</h4>
+                                    <p>[Architecture]</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-2 grid-item decor">
+                        <div class="portfolio-wrapper">
+                            <div class="portfolio-image">
+                                <img src="https://via.placeholder.com/350x350/98FB98/000000" alt="..." />
+                            </div>
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-content">
+                                    <a class="popimg ml-0" href="#">
+                                        <i class="ti-zoom-in display-24 display-md-23 display-lg-22 display-xl-20"></i>
+                                    </a>
+                                    <h4>Private House in Spain</h4>
+                                    <p>[Decor]</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-2 mb-lg-0 grid-item interior">
+                        <div class="portfolio-wrapper">
+                            <div class="portfolio-image">
+                                <img src="https://via.placeholder.com/350x350/FF4500/000000" alt="..." />
+                            </div>
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-content">
+                                    <a class="popimg ml-0" href="#">
+                                        <i class="ti-zoom-in display-24 display-md-23 display-lg-22 display-xl-20"></i>
+                                    </a>
+                                    <h4>Minimalistic Style Appartment</h4>
+                                    <p>[Interior]</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-2 mb-sm-0 grid-item decor">
+                        <div class="portfolio-wrapper">
+                            <div class="portfolio-image">
+                                <img src="https://via.placeholder.com/350x350/EEE8AA/000000" alt="..." />
+                            </div>
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-content">
+                                    <a class="popimg ml-0" href="#">
+                                        <i class="ti-zoom-in display-24 display-md-23 display-lg-22 display-xl-20"></i>
+                                    </a>
+                                    <h4>Luxury Bathroom Interior</h4>
+                                    <p>[Decor]</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-2 mb-sm-0 grid-item decor">
+                        <div class="portfolio-wrapper">
+                            <div class="portfolio-image">
+                                <img src="https://via.placeholder.com/350x350/EEE8AA/000000" alt="..." />
+                            </div>
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-content">
+                                    <a class="popimg ml-0" href="#">
+                                        <i class="ti-zoom-in display-24 display-md-23 display-lg-22 display-xl-20"></i>
+                                    </a>
+                                    <h4>Luxury Bathroom Interior</h4>
+                                    <p>[Decor]</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-2 mb-sm-0 grid-item decor">
+                        <div class="portfolio-wrapper">
+                            <div class="portfolio-image">
+                                <img src="https://via.placeholder.com/350x350/EEE8AA/000000" alt="..." />
+                            </div>
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-content">
+                                    <a class="popimg ml-0" href="#">
+                                        <i class="ti-zoom-in display-24 display-md-23 display-lg-22 display-xl-20"></i>
+                                    </a>
+                                    <h4>Luxury Bathroom Interior</h4>
+                                    <p>[Decor]</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-2 mb-sm-0 grid-item decor">
+                        <div class="portfolio-wrapper">
+                            <div class="portfolio-image">
+                                <img src="https://via.placeholder.com/350x350/EEE8AA/000000" alt="..." />
+                            </div>
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-content">
+                                    <a class="popimg ml-0" href="#">
+                                        <i class="ti-zoom-in display-24 display-md-23 display-lg-22 display-xl-20"></i>
+                                    </a>
+                                    <h4>Luxury Bathroom Interior</h4>
+                                    <p>[Decor]</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-2 mb-sm-0 grid-item decor">
+                        <div class="portfolio-wrapper">
+                            <div class="portfolio-image">
+                                <img src="https://via.placeholder.com/350x350/EEE8AA/000000" alt="..." />
+                            </div>
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-content">
+                                    <a class="popimg ml-0" href="#">
+                                        <i class="ti-zoom-in display-24 display-md-23 display-lg-22 display-xl-20"></i>
+                                    </a>
+                                    <h4>Luxury Bathroom Interior</h4>
+                                    <p>[Decor]</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     
                 </div>
             </div>
         </div>
-    </section>
-
+    </div>
+</section>
     <!-- gallery end -->
     <!-- footer start -->
     <footer class="general-footer">
         <div class="container">
             <div class="footer-top">
                 <div class="row">
-                    <div class="col-lg-3">
+                    <div class="col-lg-4 col-xl-3">
                         <div class="footer-logo"><a href="./index.html"><img src="./img/logo/logo (5).png" alt=""></a>
                         </div>
                         <ul class="footer-social-list">
+                            <li><a href=""><img src="./img/tripadvisor-xxl.png" alt="icon"></a></li>
                             <li><a href="" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
-                            <li><a href="" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></li>
-                            <li><a href="" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
+                            <li><a href="" target="_blank"><i class="fa-brands fa-tiktok"></i></a></li>
                             <li><a href="" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
                             <li><a href="" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
                         </ul>
                     </div>
-                    <div class="col-lg-3 col-md-6 col-12">
+                    <div class="col-lg-4 col-xl-3 col-md-6 col-12">
                         <div class="footer-block">
-                            <h5 class="block-title">Menular</h5>
+                            <h5 class="block-title">Menyular</h5>
                             <ul class="nav-list">
-                                <li><a href="">Haqqımızda</a></li>
-                                <li><a href="">Filiallar</a></li>
-                                <li><a href="">Menyu</a></li>
-                                <li><a href="">Xəbərlər</a></li>
-                                <li><a href="">Rəylər</a></li>
-                                <li><a href="">Galereya</a></li>
-                                <li><a href="">Əlaqə</a></li>
+                                <li><a href="./about.html">Haqqımızda</a></li>
+                                <li><a href="./branches.html">Filiallar</a></li>
+                                <li><a href="./menu.html">Menyu</a></li>
+                                <li><a href="./blog.html">Xəbərlər</a></li>
+                                <li><a href="./reviews.html">Rəylər</a></li>
+                                <li><a href="./gallery.html">Galereya</a></li>
+                                <li><a href="./contact.html">Əlaqə</a></li>
                             </ul>
 
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 col-12">
+                    <div class="col-lg-4 col-xl-3 col-md-6 col-12">
                         <div class="footer-block">
                             <h5 class="block-title">Faydalı linklər</h5>
                             <ul class="nav-list">
                                 <li><a href="">Tez-tez soruşulanlar</a></li>
-                                <li><a href="">Karyera</a></li>
+                                <li><a href="">Vakansiya</a></li>
                                 <li><a href="">Xidmət şəbəkəsi</a></li>
                             </ul>
 
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 col-12">
+                    <div class="col-lg-4 col-xl-3 col-md-6 col-12">
                         <div class="footer-block">
                             <h5 class="block-title">Ünvan</h5>
                             <ul class="address-list">
@@ -320,25 +800,24 @@
                                         <i class="fa-solid fa-location-dot"></i> Azərbaycan, Bakı ş.,
                                         Əhməd Rəcəbli 15, AZ1028
                                     </a></li>
-                                <li><a href=""><i class="fas fa-phone"></i> (+994) 555 77 00
+                                <li><a href="tel:#3223"><i class="fas fa-phone"></i> (+994) 555 77 00
                                     </a></li>
-                                <li><a href=""><i class="fa-solid fa-envelope"></i>baskent@info.az</a></li>
+                                <li><a href="mailto:baskent@info.az"><i
+                                            class="fa-solid fa-envelope"></i>baskent@info.az</a></li>
 
                             </ul>
 
                         </div>
                     </div>
 
-                    <div class="col-12">
-                        <div class="footer-bottom">
-                            <div class="copyright text-center  pt-4">
-                                © 2022 | Bütün hüquqlar qorunur.
-                            </div>
-                        </div>
-                    </div>
+
                 </div>
             </div>
-
+            <div class="footer-bottom">
+                <div class="copyright text-center  pt-4">
+                    © 2022 | Bütün hüquqlar qorunur.
+                </div>
+            </div>
         </div>
     </footer>
     <!-- footer end -->
@@ -348,15 +827,109 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
         crossorigin="anonymous"></script>
-
-    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
     <script type="text/javascript"
         src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
-    <script src="./js/masonry.js"></script>
     <script src="./js/fancybox.js"></script>
-    <script src="./js/category.js"></script>
+    <!-- <script src="./js/category.js"></script> -->
     <script src="./js/script.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+    <script src="./js/masonry.js"></script>
+    <!-- <script>
+    
+var grid = document.querySelector('.grid');
+var msnry;
+// element selectors
+var imgAll = document.querySelectorAll('.grid-item');
+var photo = document.querySelectorAll('.photo');
+var video = document.querySelectorAll('.video');
+// buttons
+const tabsUl = document.getElementById('buttonGroup');
+const lis = tabsUl.children;
+const gridItems = grid.children;
+
+
+imagesLoaded(grid, function(){
+  msnry = new Masonry( grid, {
+    //options
+    itemSelector: '.grid-item',
+    columnWidth: '.grid-sizer',
+    percentPosition: true
+  });
+});
+
+//element & class name
+function toggleClass(parentElem, childElems, className){
+  for(let i = 0; i <childElems.length; i++){
+    if(childElems[i]==parentElem){
+      childElems[i].classList.add(className);
+    }
+    else{
+      childElems[i].classList.remove(className);
+    }
+  }
+}
+
+function showImages(showImg, hideImg1, hideImg2){
+  for(let i = 0; i < showImg.length; i++){
+      showImg[i].style.display = "block";
+    }
+    for(let i = 0; i < hideImg1.length; i++){
+      hideImg1[i].style.display = "none";
+    }
+    for(let i = 0; i< hideImg2.length; i++){
+      hideImg2[i].style.display = "none";
+    }
+}
+
+
+tabsUl.addEventListener('click', (event) =>{
+  let tabLi = event.target.parentNode;
+  
+  toggleClass(tabLi, lis, 'is-active');
+  
+  
+  
+  //show ny images
+  if(event.target.id == "photo"){
+    showImages(photo);
+  }
+  
+  // show flowers
+  if(event.target.id == "video"){
+    showImages(video);
+  }
+  
+  
+  
+  msnry.layout();
+  
+});
+
+grid.addEventListener('click',function(event){
+  let imgContainer = event.target.parentNode;
+  toggleClass(imgContainer, gridItems, 'grid-item__expanded');
+  msnry.layout();
+});
+
+
+
+    </script> -->
+
+<script>
+    $(function(){
+    $(".grid").masonry({ itemSelector: ".grid-item" });
+    
+    $(".filtering").on("click", "span", function () {
+        var a = $(".gallery").isotope({});
+        var e = $(this).attr("data-filter");
+        a.isotope({ filter: e });
+    });
+    $(".filtering").on("click", "span", function () {
+        $(this).addClass("active").siblings().removeClass("active");
+    });
+})
+</script>
 </body>
 
 </html>

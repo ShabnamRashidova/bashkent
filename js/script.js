@@ -5,6 +5,12 @@ $(window).on('load', function(){
 $('.banner-carousel').owlCarousel({
     loop: false,
     responsiveClass: true,
+    autoPlay:true,
+    animateOut: 'slideOutDown',
+    animateIn: 'flipInX',
+    items:1,
+
+    smartSpeed:450,
     responsive: {
         0: {
             items: 1,
@@ -114,18 +120,7 @@ $(".close-search-area").on("click",()=>{
     
 })
 // Fancybox Config
-$('[data-fancybox="gallery"]').fancybox({
-    buttons: [
-        "slideShow",
-        "thumbs",
-        "zoom",
-        "fullScreen",
-        "share",
-        "close"
-    ],
-    loop: false,
-    protect: true
-});
+
 
 
 $(window).on("scroll",function(){

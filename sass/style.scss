@@ -7,7 +7,7 @@
 }
 
 $white: #fff;
-$primary-color: #AE834D;
+$primary-color: #ca3d26;
 $font-80px: 80px;
 $font-50px: 50px;
 $font-30px: 30px;
@@ -49,7 +49,7 @@ $margin-50px: 50px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #ca3d26;
+    background: $primary-color;
     border: 0px none #fff;
     border-radius: 5px;
 }
@@ -111,7 +111,7 @@ input {
         padding-top: 12px;
         z-index: 99;
         background: #1a1a1a;
-        color: #ca3d26;
+        color: $primary-color;
     }
 }
 
@@ -143,7 +143,6 @@ input {
     background-color: transparent;
     position: absolute;
     top: 0;
-    padding-top: 10px;
     left: 0;
     width: 100%;
     z-index: 99;
@@ -167,7 +166,7 @@ input {
         @include center;
 
         li {
-            margin-right: 18px;
+            margin-right: 10px;
 
             a {
                 color: $white;
@@ -178,18 +177,26 @@ input {
                     color: $primary-color;
 
                 }
+
+                img {
+
+                    width: 22px;
+                }
             }
         }
     }
 
     .header-top {
+        background-color: rgba(244, 244, 244, 0.4);
+
         .nav-menu-btn {
             color: $white;
         }
 
         .logo-content {
-            background-color: rgba(244, 244, 244, 0.4);
+            // background-color: rgba(244, 244, 244, 0.4);
             margin: 5px 0;
+
             height: 90px;
             @include center;
 
@@ -406,6 +413,7 @@ input {
             width: 130px;
             transition: $transition;
             height: 40px;
+            @include center;
 
             &:hover {
                 animation: pulse-primary 1.3s infinite
@@ -462,11 +470,11 @@ input {
     .banner-carousel {
         .slider-item {
             position: relative;
-            background: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .3)), url('../img/marissa-grootes-u2Lp8tXIcjw-unsplash.png');
-            padding: 380px 0;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
+
+            padding: 328px 0;
+            background-size: cover !important;
+            background-position: center !important;
+            background-repeat: no-repeat !important;
             width: 100%;
         }
     }
@@ -509,8 +517,21 @@ input {
 }
 
 .about-section {
+    .link-about {
+        background-color: $primary-color;
+        color: $white;
+        padding: 5px 10px;
+        border: 1px solid $primary-color;
+        transition: $transition;
+
+        &:hover {
+            background-color: $white;
+            color: $primary-color;
+        }
+    }
+
     .about-image {
-        height: 500px;
+        height: 540px;
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -1010,6 +1031,47 @@ input {
 
             }
         }
+
+        .comment-form {
+            padding-left: 30px;
+            border-left: 3px solid $primary-color;
+
+            form {
+                box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+                padding: 30px;
+
+                .form-control {
+
+                    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px !important;
+                    margin-bottom: 20px;
+                }
+select{
+   margin-bottom: 20px;
+}
+                .submit-btn {
+                    background-color: $primary-color;
+                    color: $white;
+                    width: 140px;
+                    height: 40px;
+                    border: 1px solid $primary-color;
+                    transition: $transition;
+
+                    &:hover {
+                        color: $primary-color;
+                        background-color: $white;
+
+                    }
+                }
+
+                .form-title {
+                    text-transform: capitalize;
+                }
+
+                .bottom-img {
+                    margin-top: -40px;
+                }
+            }
+        }
     }
 
     .testimonial-carousel {
@@ -1067,16 +1129,30 @@ input {
             margin-top: 30px;
 
             li {
-                margin-right: 30px;
+                transition: $transition;
+                margin-right: 10px;
+                width: 35px;
+                height: 35px;
+                @include center;
+                position: relative;
+                border-radius: 50%;
+
+                &:hover {
+                    background-color: $primary-color;
+                    transform: translateY(-2px);
+                }
 
                 a {
                     color: #ddd;
-                    font-size: $font-22px;
-                    transition: $transition;
+                    font-size: $font-18px;
 
-                    &:hover {
-                        color: #E5601E;
+
+                    img {
+                        width: 22px;
+
                     }
+
+
                 }
             }
         }
@@ -1124,9 +1200,29 @@ input {
                 a {
                     color: $white;
                     transition: $transition;
+                    display: inline-block;
+                    margin-bottom: 10px;
+                    position: relative;
 
-                    &:hover {
-                        color: #E5601E;
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        bottom: -5px;
+                        left: 50%;
+                        height: 1px;
+                        left: 0;
+                        transition: $transition;
+                        width: 0;
+
+                        visibility: hidden;
+                        background-color: $white;
+
+                    }
+
+                    &:hover::after {
+                        width: 100%;
+
+                        visibility: visible;
                     }
 
                     i {
@@ -1143,94 +1239,43 @@ input {
     }
 }
 
-.contact-form {
-    .contact-info {
-        li {
-            span {
-                font-weight: 500;
+
+
+.gallery-section {
+
+    .product-item {
+        &.grid-item {
+            position: relative;
+
+            i {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background-color: #ca3d26;
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                @include center;
+                color: #fff;
+                transition: $transition;
+
+                &:hover {
+                    animation: pulse-primary 1.3s infinite;
+                }
             }
         }
-    }
 
-    .form-control {
-        border-radius: 2px;
 
-        &:focus {
-            box-shadow: none;
-            border-color: #ddd;
-            outline: 1px solid #ddd;
-
+        &.hide {
+            animation: animate 0.4s ease-in-out;
+            display: none;
 
         }
 
-        &.submit-btn {
-            background-color: $primary-color;
-            transition: var(--transition);
-            color: #fff;
-            border: none;
-        }
-    }
-
-    .mapouter {
-        position: relative;
-        text-align: right;
-        width: 100%;
-        height: 400px;
-
-        .gmap_canvas {
-            overflow: hidden;
-            background: none !important;
-            width: 100%;
-            height: 400px;
-        }
-    }
-
-}
-.gallery-section{
- 
-.product-item{
-    .grid-item{
-        position: relative;
-        i{
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%,-50%);
-            background-color: #ca3d26;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            @include center;
-            color: #fff;
-            transition: $transition;
-            &:hover{
-                animation: pulse-primary 1.3s infinite;
-            }
-        }
-    }
-    &.hide {
-        animation: animate 0.4s ease-in-out;
-        display: none;
-
-    }
-
-    &.show {
-        display: block;
-        animation: animate 0.4s ease-in-out;
-    }
-}
-}
-.grid {
-    margin: 1rem auto;
-
-    &-item {
-        width: 250px;
-        height: auto;
-        margin-bottom: 10px;
-
-        img {
-            width: 100%;
-            height: 100%;
+        &.show {
+            display: block;
+            animation: animate 0.4s ease-in-out;
         }
     }
 }
@@ -1369,6 +1414,70 @@ input {
 
     }
 
+    .testimonial-section {
+        &.testimonial-section-2 {
+
+            .item {
+
+                .slider-item-left {
+                    .slider-img {
+                        img {
+                            width: 80px;
+                        }
+                    }
+
+                }
+                .slider-item-right {
+                    text-align: center;
+                    padding: 20px 10px;
+                }
+            }
+
+            .comment-form {
+                padding-left: 0;
+                border:none;
+
+             
+            }
+        }
+
+        .testimonial-carousel {
+
+            .slider-item {
+                @include center;
+
+                .slider-item-left {
+                    .slider-img {
+                        width: 70px;
+                    }
+
+                    .review {
+                        margin-top: 10px;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+
+                        i {
+                            color: gold;
+                            font-size: 10px;
+                        }
+                    }
+                }
+
+                .slider-item-right {
+                    margin-left: 20px;
+                    padding: 5px 15px;
+                    width: 560px;
+                    border: 1px solid #ddd;
+
+                    p {
+                        font-size: 16px;
+                    }
+
+                }
+            }
+        }
+    }
 
 }
 
@@ -1943,4 +2052,42 @@ input {
     100% {
         transform: scale(1)
     }
+}
+
+
+
+.grid:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.grid-sizer,
+.grid-item {
+    width: 33.33%;
+
+}
+
+.grid-item {
+    float: left;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+}
+
+.grid-item img {
+    display: block;
+    max-width: 100%;
+    border: 10px solid white;
+
+    @media screen and (max-width: 414px) {
+        border: 5px solid white;
+    }
+}
+
+.grid-item.grid-item__expanded {
+    width: 66.66%;
+    z-index: 2;
 }

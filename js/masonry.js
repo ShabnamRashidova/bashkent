@@ -12,7 +12,7 @@
             columnWidth: ".grid-item",
             // percentPosition: true,
             gutter: 10,
-            fitWidth: true
+            fitWidth: true,
         });
 
         $grid.imagesLoaded().progress(function () {
