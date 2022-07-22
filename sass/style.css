@@ -707,11 +707,7 @@ input:focus {
   border-radius: 10px;
 }
 .partners-section .partners-carousel .slider-item a img {
-  transition: all 0.4s ease;
   width: 100%;
-}
-.partners-section .partners-carousel .slider-item a img:hover {
-  transform: scale(1.1);
 }
 
 .blog-section .bottom-img {
