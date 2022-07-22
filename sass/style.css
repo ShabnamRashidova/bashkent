@@ -855,14 +855,41 @@ input:focus {
   box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
   padding: 30px;
 }
-.testimonial-section.testimonial-section-2 .comment-form form .form-control {
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px !important;
+.testimonial-section.testimonial-section-2 .comment-form form input {
   margin-bottom: 20px;
+  padding-bottom: 10px;
+  width: 100%;
+  display: inline-block;
+  margin-bottom: 20px;
+  border-radius: 0;
+  border: none;
+  border-bottom: 1px solid #cdcdcd;
+}
+.testimonial-section.testimonial-section-2 .comment-form form input:focus {
+  border-color: #ca3d26;
 }
 .testimonial-section.testimonial-section-2 .comment-form form select {
-  color: #60686F;
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px !important;
   margin-bottom: 20px;
+  padding-bottom: 10px;
+  width: 100%;
+  display: inline-block;
+  margin-bottom: 20px;
+  border-radius: 0;
+  border: none;
+  border-bottom: 1px solid #cdcdcd;
+}
+.testimonial-section.testimonial-section-2 .comment-form form select:focus {
+  border-color: #ca3d26;
+  box-shadow: none !important;
+}
+.testimonial-section.testimonial-section-2 .comment-form form textarea {
+  border-radius: 2px;
+  margin-bottom: 30px;
+}
+.testimonial-section.testimonial-section-2 .comment-form form textarea:focus {
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+  outline: none !important;
+  border-color: #cdcddc;
 }
 .testimonial-section.testimonial-section-2 .comment-form form .submit-btn {
   background-color: #ca3d26;

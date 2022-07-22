@@ -1105,18 +1105,48 @@ input {
                 box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
                 padding: 30px;
 
-                .form-control {
+                input {
 
-                    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px !important;
+                  
                     margin-bottom: 20px;
+                   
+                    padding-bottom: 10px;
+                     width: 100%;
+                     display: inline-block;
+                     margin-bottom: 20px;
+                     border-radius: 0;
+                     border: none;
+                     border-bottom: 1px solid #cdcdcd;
+                 &:focus{
+                     border-color: $primary-color;
+                 }
                 }
 
                 select {
-                    color: #60686F;
-                    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px !important;
                     margin-bottom: 20px;
+                   
+                    padding-bottom: 10px;
+                     width: 100%;
+                     display: inline-block;
+                     margin-bottom: 20px;
+                     border-radius: 0;
+                     border: none;
+                     border-bottom: 1px solid #cdcdcd;
+                 &:focus{
+                     border-color: $primary-color;
+                     box-shadow: none !important;
+                 }
                 }
+textarea{
+    border-radius: 2px;
+    margin-bottom: 30px;
+    &:focus{
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+        outline: none !important;
+        border-color: #cdcddc;
 
+    }
+}
                 .submit-btn {
                     background-color: $primary-color;
                     color: $white;
