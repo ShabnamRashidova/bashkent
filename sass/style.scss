@@ -138,7 +138,21 @@ input {
         cursor: pointer;
     }
 }
-
+.pagination{
+  .page-link{
+    background-color: $primary-color !important;
+    color: $white;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 15px !important;
+    display: inline-block;
+    margin-right: 10px;
+    transition: $transition;
+    &:hover{
+        animation:pulse-primary 1.3s infinite;
+    }
+  }
+}
 .general-header {
     background-color: transparent;
     position: absolute;
@@ -168,18 +182,18 @@ input {
         li {
             margin-right: 10px;
             transition: $transition;
-        
+
             border-radius: 50%;
 
             &:hover {
-                
+
                 transform: translateY(-2px);
             }
 
             a {
                 color: $white;
                 font-size: $font-18px;
-               
+
 
                 img {
 
@@ -677,29 +691,33 @@ input {
         }
     }
 }
-.branches-section-single{
+
+.branches-section-single {
     background-image: url('../img/Group\ 8.png'), url('../img/Group\ 7.png');
     background-position: right top, left bottom;
     background-repeat: no-repeat;
     padding: 100px 0 170px;
 
-    .title{
-             font-size: $font-22px;
+    .title {
+        font-size: $font-22px;
     }
-    .bottom-img{
+
+    .bottom-img {
         width: 180px;
         display: flex;
         margin-top: -25px;
-        
+
         justify-content: center;
-   
+
     }
-    .info{
+
+    .info {
         color: #1a1a1a;
         font-weight: 400;
         line-height: 1.7;
     }
 }
+
 .menu-section {
     .menu-item {
         position: relative;
@@ -912,6 +930,7 @@ input {
     .blog-item {
         border: 1px solid #eee;
         transition: $transition;
+        margin-bottom: 40px;
 
         &:hover {
             box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
@@ -994,23 +1013,28 @@ input {
         .item-info {
             padding: 10px;
             margin-top: 10px;
-.social-media-list{
-    display: flex;
-    li{
-        margin-right: 20px;
-        a{
-            color: $white;
-            background-color: $primary-color;
-            padding: 5px 10px;
-            font-size: $font-15px;
-            border-radius: 3px;
-            transition: $transition;
-            &:hover{
-                animation:pulse-primary 1.3s infinite;
+
+            .social-media-list {
+                display: flex;
+
+                li {
+                    margin-right: 20px;
+
+                    a {
+                        color: $white;
+                        background-color: $primary-color;
+                        padding: 5px 10px;
+                        font-size: $font-15px;
+                        border-radius: 3px;
+                        transition: $transition;
+
+                        &:hover {
+                            animation: pulse-primary 1.3s infinite;
+                        }
+                    }
+                }
             }
-        }
-    }
-}
+
             .date {
 
                 font-size: $font-18px;
@@ -1043,9 +1067,6 @@ input {
             margin-bottom: 20px;
 
             .slider-item-left {
-                .slider-img {
-                    width: 70px;
-                }
 
                 .review {
                     margin-top: 10px;
@@ -1086,9 +1107,13 @@ input {
                     box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px !important;
                     margin-bottom: 20px;
                 }
-select{
-   margin-bottom: 20px;
-}
+
+                select {
+                    color: #60686F;
+                    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px !important;
+                    margin-bottom: 20px;
+                }
+
                 .submit-btn {
                     background-color: $primary-color;
                     color: $white;
@@ -1098,8 +1123,7 @@ select{
                     transition: $transition;
 
                     &:hover {
-                        color: $primary-color;
-                        background-color: $white;
+                        animation: pulse-primary 1.3s infinite;
 
                     }
                 }
@@ -1121,9 +1145,7 @@ select{
             @include center;
 
             .slider-item-left {
-                .slider-img {
-                    width: 70px;
-                }
+              
 
                 .review {
                     margin-top: 10px;
@@ -1285,7 +1307,7 @@ select{
 .gallery {
 
     .product-item {
-       .card {
+        .card {
             position: relative;
 
             i {
@@ -1302,7 +1324,7 @@ select{
                 color: #fff;
                 transition: $transition;
                 animation: pulse-primary 1.3s infinite;
-               
+
             }
         }
 
@@ -1427,13 +1449,14 @@ select{
             }
         }
     }
-  
+
     .about-section {
         .link-about {
-@include center;
-width: 120px;
-margin: 20px auto; 
+            @include center;
+            width: 120px;
+            margin: 20px auto;
         }
+
         .about-image {
             @include center;
             margin-bottom: 20px;
@@ -1466,12 +1489,14 @@ margin: 20px auto;
 
                 .slider-item-left {
                     .slider-img {
+                        text-align: center;
                         img {
                             width: 80px;
                         }
                     }
 
                 }
+
                 .slider-item-right {
                     text-align: center;
                     padding: 20px 10px;
@@ -1480,9 +1505,9 @@ margin: 20px auto;
 
             .comment-form {
                 padding-left: 0;
-                border:none;
+                border: none;
 
-             
+
             }
         }
 
@@ -1492,9 +1517,7 @@ margin: 20px auto;
                 @include center;
 
                 .slider-item-left {
-                    .slider-img {
-                        width: 70px;
-                    }
+                   
 
                     .review {
                         margin-top: 10px;
@@ -1523,19 +1546,22 @@ margin: 20px auto;
             }
         }
     }
-    .branches-section-single{
-  
-        .title,.info{
-               
-                 text-align: center;
-        }
-        .bottom-img{
-          
-            margin:-25px  auto 0;
 
-       
+    .branches-section-single {
+
+        .title,
+        .info {
+
+            text-align: center;
         }
-        
+
+        .bottom-img {
+
+            margin: -25px auto 0;
+
+
+        }
+
     }
 }
 
@@ -1797,9 +1823,10 @@ margin: 20px auto;
         background-image: none;
     }
 
-    .branches-section-single{
-      background-image: none;
-    padding: 0;}
+    .branches-section-single {
+        background-image: none;
+        padding: 0;
+    }
 
     .testimonial-section {
         background-image: none;
@@ -2098,5 +2125,3 @@ margin: 20px auto;
         transform: scale(1)
     }
 }
-
-
