@@ -167,16 +167,19 @@ input {
 
         li {
             margin-right: 10px;
+            transition: $transition;
+        
+            border-radius: 50%;
+
+            &:hover {
+                
+                transform: translateY(-2px);
+            }
 
             a {
                 color: $white;
                 font-size: $font-18px;
-                transition: $transition;
-
-                &:hover {
-                    color: $primary-color;
-
-                }
+               
 
                 img {
 
@@ -674,7 +677,29 @@ input {
         }
     }
 }
+.branches-section-single{
+    background-image: url('../img/Group\ 8.png'), url('../img/Group\ 7.png');
+    background-position: right top, left bottom;
+    background-repeat: no-repeat;
+    padding: 100px 0 170px;
 
+    .title{
+             font-size: $font-22px;
+    }
+    .bottom-img{
+        width: 180px;
+        display: flex;
+        margin-top: -25px;
+        
+        justify-content: center;
+   
+    }
+    .info{
+        color: #1a1a1a;
+        font-weight: 400;
+        line-height: 1.7;
+    }
+}
 .menu-section {
     .menu-item {
         position: relative;
@@ -969,7 +994,23 @@ input {
         .item-info {
             padding: 10px;
             margin-top: 10px;
-
+.social-media-list{
+    display: flex;
+    li{
+        margin-right: 20px;
+        a{
+            color: $white;
+            background-color: $primary-color;
+            padding: 5px 10px;
+            font-size: $font-15px;
+            border-radius: 3px;
+            transition: $transition;
+            &:hover{
+                animation:pulse-primary 1.3s infinite;
+            }
+        }
+    }
+}
             .date {
 
                 font-size: $font-18px;
@@ -1241,28 +1282,27 @@ select{
 
 
 
-.gallery-section {
+.gallery {
 
     .product-item {
-        &.grid-item {
+       .card {
             position: relative;
 
             i {
                 position: absolute;
                 top: 50%;
+                font-size: $font-18px;
                 left: 50%;
                 transform: translate(-50%, -50%);
                 background-color: #ca3d26;
-                width: 40px;
-                height: 40px;
+                width: 50px;
+                height: 50px;
                 border-radius: 50%;
                 @include center;
                 color: #fff;
                 transition: $transition;
-
-                &:hover {
-                    animation: pulse-primary 1.3s infinite;
-                }
+                animation: pulse-primary 1.3s infinite;
+               
             }
         }
 
@@ -1387,8 +1427,13 @@ select{
             }
         }
     }
-
+  
     .about-section {
+        .link-about {
+@include center;
+width: 120px;
+margin: 20px auto; 
+        }
         .about-image {
             @include center;
             margin-bottom: 20px;
@@ -1478,7 +1523,20 @@ select{
             }
         }
     }
+    .branches-section-single{
+  
+        .title,.info{
+               
+                 text-align: center;
+        }
+        .bottom-img{
+          
+            margin:-25px  auto 0;
 
+       
+        }
+        
+    }
 }
 
 @media screen and (max-width:768px) {
@@ -1739,7 +1797,9 @@ select{
         background-image: none;
     }
 
-
+    .branches-section-single{
+      background-image: none;
+    padding: 0;}
 
     .testimonial-section {
         background-image: none;
@@ -1981,22 +2041,7 @@ select{
     }
 }
 
-@keyframes pulse-tertiary {
-    0% {
-        -webkit-box-shadow: 0 0 0 0 rgba(75, 181, 67, 0.75);
-        box-shadow: 0 0 0 0 rgba(75, 181, 67, 0.75);
-    }
 
-    80% {
-        -webkit-box-shadow: 0 0 0 10px rgba(255, 134, 134, 0);
-        box-shadow: 0 0 0 10px rgba(255, 134, 134, 0);
-    }
-
-    100% {
-        -webkit-box-shadow: 0 0 0 0 rgba(255, 134, 134, 0);
-        box-shadow: 0 0 0 0 rgba(255, 134, 134, 0);
-    }
-}
 
 @keyframes shake {
 
@@ -2055,39 +2100,3 @@ select{
 }
 
 
-
-.grid:after {
-    content: '';
-    display: block;
-    clear: both;
-}
-
-.grid-sizer,
-.grid-item {
-    width: 33.33%;
-
-}
-
-.grid-item {
-    float: left;
-
-    &:hover {
-        cursor: pointer;
-    }
-
-}
-
-.grid-item img {
-    display: block;
-    max-width: 100%;
-    border: 10px solid white;
-
-    @media screen and (max-width: 414px) {
-        border: 5px solid white;
-    }
-}
-
-.grid-item.grid-item__expanded {
-    width: 66.66%;
-    z-index: 2;
-}

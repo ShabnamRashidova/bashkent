@@ -17,11 +17,53 @@
         integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
-        type="text/css" media="screen" />
-
+    
     <link rel="stylesheet" href="./sass/style.css">
 </head>
+<style>
+    .image-wrap {
+        padding: 16px;
+    }
+
+    .image-masonry {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        grid-auto-rows: 240px;
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        font-size: 3rem;
+        color: #fff;
+        box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem,
+            rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+        height: 100%;
+        width: 100%;
+        border-radius: 4px;
+        transition: all 500ms;
+        overflow: hidden;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        padding: 0;
+        margin: 0;
+    }
+
+    @media screen and (min-width: 600px) {
+        .card-tall {
+            grid-row: span 2 / auto;
+        }
+
+        .card-wide {
+            grid-column: span 2 / auto;
+        }
+    }
+</style>
 
 <body>
     <!-- Preloader start-->
@@ -191,7 +233,7 @@
 
                     </div>
                 </div>
-               
+
                 <div class="col-lg-6">
                     <h4 class="about-title">Haqqımızda</h4>
                     <div class="bottom-img">
@@ -490,7 +532,7 @@
     <!-- blog end-->
 
     <!-- gallery start -->
-    <section class="gallery-section">
+    <!-- <section class="gallery-section">
         <div class="container">
 
             <div class="gallery">
@@ -506,8 +548,34 @@
             </div>
 
         </div>
-    </section>
+    </section> -->
 
+    <div class="gallery mt-5">
+        <div class="container">
+            <section class="image-wrap">
+                <div class="image-masonry">
+                    <a href="./img/gallery/patrick-schneider-5xltWMpkN3E-unsplash.png" class="card card-tall card-wide"
+                        style="background-image: url('./img/gallery/patrick-schneider-5xltWMpkN3E-unsplash.png')"></a>
+                    <a href="./img/gallery/rod-long-kImU-9S9uh8-unsplash.png" class="card card-tall"
+                        style="background-image: url('./img/gallery/rod-long-kImU-9S9uh8-unsplash.png')"></a>
+                    <a href="./img/gallery/shen-liu-2PUwRmJOdNo-unsplash.png" class="card "
+                        style="background-image: url('./img/gallery/shen-liu-2PUwRmJOdNo-unsplash.png')"></a>
+                    <a href="./img/gallery/igor-rand-wfM1Fi-kMaY-unsplash.png" class="card "
+                        style="background-image: url('./img/gallery/igor-rand-wfM1Fi-kMaY-unsplash.png')"></a>
+                    <a href="./img/gallery/shen-liu-2PUwRmJOdNo-unsplash.png" class="card card-tall"
+                        style="background-image: url('./img/gallery/shen-liu-2PUwRmJOdNo-unsplash.png')"></a>
+                    <a href="./img/gallery/stefan-johnson-xIFbDeGcy44-unsplash.png" class="card card-tall card-wide"
+                        style="background-image: url('./img/gallery/stefan-johnson-xIFbDeGcy44-unsplash.png')"></a>
+                    
+                    <a href="./img/gallery/stefan-johnson-xIFbDeGcy44-unsplash.png" class="card "
+                        style="background-image: url('./img/gallery/stefan-johnson-xIFbDeGcy44-unsplash.png')"></a>
+                    
+                    <a href="./img/gallery/stefan-johnson-xIFbDeGcy44-unsplash.png" class="card "
+                        style="background-image: url('./img/gallery/stefan-johnson-xIFbDeGcy44-unsplash.png')"></a>
+                </div>
+            </section>
+        </div>
+    </div>
     <!-- gallery end -->
 
     <!-- testimonial start -->
@@ -576,7 +644,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 d-flex justify-content-center">
-                    <div class="mapouter">
+                    <iframe src="https://www.google.com/maps/d/u/1/embed?mid=1UQoB2Xo9DSiKrUx5V290Dxzny7WCIB0&ehbc=2E312F" style="width: 100%; height:400px;"></iframe>
+                    <!-- <div class="mapouter">
                         <div class="gmap_canvas"><iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no"
                                 marginheight="0" marginwidth="0"
                                 src="https://maps.google.com/maps?width=707&amp;height=369&amp;hl=en&amp;q=University of Oxford&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a
@@ -600,7 +669,7 @@
                                 height: 369px !important;
                             }
                         </style>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -683,15 +752,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
         crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
-    <script type="text/javascript"
-        src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
-
-    <script src="./js/masonry.js"></script>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
     <script src="./js/fancybox.js"></script>
-    <script src="./js/category.js"></script>
-
     <script src="./js/script.js"></script>
 </body>
 

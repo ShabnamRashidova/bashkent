@@ -20,7 +20,50 @@
 
     <link rel="stylesheet" href="./sass/style.css">
 </head>
+<style>
+    .image-wrap {
+        padding: 16px;
+    }
 
+    .image-masonry {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        grid-auto-rows: 240px;
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        font-size: 3rem;
+        color: #fff;
+        box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem,
+            rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+        height: 100%;
+        width: 100%;
+        border-radius: 4px;
+        transition: all 500ms;
+        overflow: hidden;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        padding: 0;
+        margin: 0;
+    }
+
+    @media screen and (min-width: 600px) {
+        .card-tall {
+            grid-row: span 2 / auto;
+        }
+
+        .card-wide {
+            grid-column: span 2 / auto;
+        }
+    }
+</style>
 <body>
     <!-- Preloader start-->
     <div class="preloader">
@@ -191,16 +234,19 @@
     </section>
     <!-- banner end -->
     <!-- branches start -->
-    <section class="branches-section branches-section-single">
+    <div class="branches-section-single">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4">
+                <div class="col-lg-5 col-xl-4  d-flex justify-content-center mb-5">
                     <div class="branches-img">
                         <img src="./img/branches/-b837305e161580832659279444010087249.png" alt="">
                     </div>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6 col-xl-7">
                     <h4 class="title">Başkent Nərimanov</h4>
+                    <div class="bottom-img">
+                        <img src="./img/Group 10.png" alt="img_bottom">
+                    </div>
                     <div class="info">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit nisi modi nostrum
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit nisi modi nostrum
@@ -212,10 +258,35 @@
             </div>
 
         </div>
-    </section>
-    <section class="gallery">
-        
-    </section>
+    </div>
+    <div class="gallery">
+        <div class="container">
+            <section class="image-wrap">
+                <div class="image-masonry">
+                    <a href="./img/gallery/patrick-schneider-5xltWMpkN3E-unsplash.png" class="card card-tall card-wide"
+                        style="background-image: url('./img/gallery/patrick-schneider-5xltWMpkN3E-unsplash.png')"></a>
+                    <a href="./img/gallery/rod-long-kImU-9S9uh8-unsplash.png" class="card card-tall"
+                        style="background-image: url('./img/gallery/rod-long-kImU-9S9uh8-unsplash.png')"></a>
+                    <a href="./img/gallery/shen-liu-2PUwRmJOdNo-unsplash.png" class="card "
+                        style="background-image: url('./img/gallery/shen-liu-2PUwRmJOdNo-unsplash.png')"></a>
+                    <a href="./img/gallery/igor-rand-wfM1Fi-kMaY-unsplash.png" class="card "
+                        style="background-image: url('./img/gallery/igor-rand-wfM1Fi-kMaY-unsplash.png')"></a>
+                    <a href="./img/gallery/shen-liu-2PUwRmJOdNo-unsplash.png" class="card card-tall"
+                        style="background-image: url('./img/gallery/shen-liu-2PUwRmJOdNo-unsplash.png')"></a>
+                    <a href="./img/gallery/stefan-johnson-xIFbDeGcy44-unsplash.png" class="card card-tall card-wide"
+                        style="background-image: url('./img/gallery/stefan-johnson-xIFbDeGcy44-unsplash.png')"></a>
+                    
+                    <a href="./img/gallery/stefan-johnson-xIFbDeGcy44-unsplash.png" class="card "
+                        style="background-image: url('./img/gallery/stefan-johnson-xIFbDeGcy44-unsplash.png')"></a>
+                    
+                    <a href="./img/gallery/stefan-johnson-xIFbDeGcy44-unsplash.png" class="card "
+                        style="background-image: url('./img/gallery/stefan-johnson-xIFbDeGcy44-unsplash.png')"></a>
+                    
+                
+                </div>
+            </section>
+        </div>
+    </div>
     <!-- branches end -->
 
 
@@ -296,9 +367,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
         crossorigin="anonymous"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
     <script src="./js/script.js"></script>
+    <script src="./js/fancybox.js"></script>
 </body>
 
 </html>
