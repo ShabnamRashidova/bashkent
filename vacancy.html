@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Vakansiya</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+    <link rel="stylesheet" href="./sass/style.css">
+</head>
+
+
+<body>
+    <!-- Preloader start-->
+    <div class="preloader">
+        <div class="preloader-spinner"><i class="fa fa-cutlery"></i></div>
+    </div>
+    <!-- Preloader end -->
+    <button class="up-btn">
+        <i class="fa-solid fa-chevron-up"></i>
+    </button>
+    <!-- header start -->
+    <header class="general-header">
+        <div class="header-top">
+            <div class="container">
+                <div class="row align-items-center justify-content-between ">
+                    <div class="col-md-4 col-3 d-lg-none d-md-flex">
+                        <button class="nav-menu-btn"><i class="fa-solid fa-bars fa-2x"></i></button>
+                    </div>
+                    <div class="col-md-3 d-lg-flex justify-content-evenly d-none">
+                        <a href="tel:#212" class="reservation-btn">Rezervasiya</a>
+                    </div>
+                    <div class="col-md-4 col-6">
+                        <div class="logo-content">
+                            <a href="./index.html" class="header-logo">
+                                <img src="./img/logo/logo (5).png" alt="header_logo">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4  col-3  d-flex justify-content-end">
+                        <div class="header-right-block">
+                            <ul class="header-social-list">
+                                <li><a href=""><img src="./img/tripadvisor-xxl.png" alt="icon"></a></li>
+                                <li><a href="" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                <li><a href="" target="_blank"><i class="fa-brands fa-tiktok"></i></a></li>
+                                <li><a href="" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                                <li><a href="" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
+                            </ul>
+                            <div class="search-area">
+                                <form action="">
+                                    <input type="text" placeholder="Axtar" class="search-input">
+                                    <button class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                                </form>
+                            </div>
+                            <div class="search-area-mobile">
+
+                                <div class="form-content-overlay">
+                                    <div class="close-search-area">
+                                        <i class="fas fa-times"></i>
+                                    </div>
+                                    <form action="">
+                                        <input type="text" placeholder="Axtar" class="search-input">
+                                        <button class="form-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                                    </form>
+                                </div>
+                                <button class="search-btn-mobile"><i class="fa-solid fa-magnifying-glass"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="header-bottom-content">
+            <div class="bg-overlay"></div>
+            <div class="header-bottom hedaer-mobile-menu">
+                <div class="container">
+                    <div class="row align-items-center justify-content-between">
+
+                        <div class="col-6">
+                            <a href="./index.html" class="d-lg-none d-md-block header-sidebar-logo"><img
+                                    src="./img/logo/logo (5).png" alt=""></a>
+                        </div>
+                        <div class="col-6 justify-content-end d-flex d-md-flex d-lg-none">
+                            <div class="menu-close-icon">
+                                <i class="fas fa-times"></i>
+                            </div>
+                        </div>
+
+                        <div class="col-12 ">
+
+                            <nav class="nav-menu">
+                                <ul class="nav-list">
+                                    <li class="nav-item"><a href="./about.html" class="nav-link">Haqqımızda</a></li>
+                                    <li class="nav-item"><a href="./branches.html" class="nav-link">Filiallar</a></li>
+                                    <li class="nav-item"><a href="./menu.html" class="nav-link">Menyu</a></li>
+                                    <li class="nav-item"><a href="./gallery.html" class="nav-link">Galereya</a></li>
+                                    <li class="nav-item"><a href="./blog.html" class="nav-link">Xəbərlər</a></li>
+                                    <li class="nav-item"><a href="./reviews.html" class="nav-link">Rəylər</a></li>
+                                    <li class="nav-item"><a href="./contact.html" class="nav-link">Əlaqə</a></li>
+                                </ul>
+                            </nav>
+
+
+                        </div>
+                        <div class="col-12 d-flex justify-content-center mb-3">
+                            <div class="d-lg-none d-md-block">
+                                <a href="tel:#2212" class="reservation-btn">Rezervasiya</a>
+                            </div>
+                        </div>
+                        <div class="col-12 border-top pt-4 d-md-flex justify-content-center d-lg-none">
+                            <ul class="header-social-list ">
+                                <li><a href=""><img src="./img/tripadvisor-xxl.png" alt="icon"></a></li>
+                                <li><a href="" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                <li><a href="" target="_blank"><i class="fa-brands fa-tiktok"></i></a></li>
+                                <li><a href="" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                                <li><a href="" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-fixed">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-3">
+                        <a href="./index.html" class="header-fixed-logo">
+                            <img src="./img/logo/logo (5).png" alt="logo_img">
+                        </a>
+                    </div>
+                    <div class="col-lg-7">
+                        <ul class="nav-list">
+                            <li class="nav-item"><a href="./about.html" class="nav-link">Haqqımızda</a></li>
+                            <li class="nav-item"><a href="./branches.html" class="nav-link">Filiallar</a></li>
+                            <li class="nav-item"><a href="./menu.html" class="nav-link">Menyu</a></li>
+                            <li class="nav-item"><a href="./gallery.html" class="nav-link">Galereya</a></li>
+                            <li class="nav-item"><a href="./blog.html" class="nav-link">Xəbərlər</a></li>
+                            <li class="nav-item"><a href="./reviews.html" class="nav-link">Rəylər</a></li>
+
+                            <li class="nav-item"><a href="./contact.html" class="nav-link">Əlaqə</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2 d-flex justify-content-end">
+                        <a href="tel:#21212" class="reservation-btn-2">
+                            Rezervasiya
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header end-->
+    <!-- banner start -->
+    <section class="banner-section banner-section-2">
+        <div class="banner-carousel owl-carousel owl-theme">
+            <div class="slider-item" style="  background: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .3)), url('../img/marissa-grootes-u2Lp8tXIcjw-unsplash.png');">
+            </div>
+            <div class="slider-item" style="  background: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .3)), url('../img/marissa-grootes-u2Lp8tXIcjw-unsplash.png');">
+            </div>
+            <div class="slider-item" style="  background: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .3)), url('../img/marissa-grootes-u2Lp8tXIcjw-unsplash.png');">
+            </div>
+        </div>
+        <div class="slide-content slide-content-2">
+            <h1 class="text-center">VAKANSİYA</h1>
+            <div class="bottom-img">
+                <img src="./img/Group 35.png" alt="img_bottom">
+            </div>
+           <ul>
+            <li><a href="./index.html">Əsas səhifə</a></li>
+            <li><i class="fa-solid fa-angle-right"></i></li>
+            
+            <li><a href="./vacancy.html" class="active">Vakansiya</a></li>
+           </ul>
+        </div>
+    </section>
+    <!-- banner end -->
+
+   <!-- vacancy section start -->
+   <section class="vacancy-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h5 class="section-title">İşə qəbul üçün müraciət anketi</h5>
+                <div class="bottom-img">
+                    <img src="./img/Group 9.png" alt="img_bottom">
+                </div>
+                <form action="" class="form-general">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="input-group mb-3">
+                               
+                                <input type="text" placeholder="Ad *">
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="input-group mb-3">
+                                       <input type="text" placeholder="Soyad *">          
+                            </div>
+
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="input-group mb-3">
+                                <input type="email" placeholder="E-poçt *">
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="input-group mb-3">
+                                <input type="text" placeholder="Telefon *">
+                            </div>
+
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="input-group mb-3">
+                                <label class="custom-file-upload">
+                                    <input type="file" />
+                                    <img src="./images/icon/Group 428.png" alt="">
+                                    <span>CV *</span>
+                                </label>
+                            </div>
+
+
+                        </div>
+                        <div class="col-lg-6">
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>Müraciət etmək istdəyiniz vəzifəni seçin</option>
+                                <option value="1">Dizayner</option>
+                                
+                              </select>
+
+                        </div>
+                    <div class="col-12">
+                        <div class="input-group">
+                            <textarea  placeholder="Əlavə qeydləriniz"></textarea>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 d-flex justify-content-start">
+                        <button type="sumbit" class="submit-btn">Göndər</button>
+                    </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+   </section>
+   <!-- vacancy section end -->
+    <!-- footer start -->
+    <footer class="general-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="row">
+                    <div class="col-lg-4 col-xl-3">
+                        <div class="footer-logo"><a href="./index.html"><img src="./img/logo/logo (5).png" alt=""></a>
+                        </div>
+                        <ul class="footer-social-list">
+                            <li><a href=""><img src="./img/tripadvisor-xxl.png" alt="icon"></a></li>
+                            <li><a href="" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
+                            <li><a href="" target="_blank"><i class="fa-brands fa-tiktok"></i></a></li>
+                            <li><a href="" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href="" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4 col-xl-3 col-md-6 col-12">
+                        <div class="footer-block">
+                            <h5 class="block-title">Menyular</h5>
+                            <ul class="nav-list">
+                                <li><a href="./about.html">Haqqımızda</a></li>
+                                <li><a href="./branches.html">Filiallar</a></li>
+                                <li><a href="./menu.html">Menyu</a></li>
+                                <li><a href="./blog.html">Xəbərlər</a></li>
+                                <li><a href="./reviews.html">Rəylər</a></li>
+                                <li><a href="./gallery.html">Galereya</a></li>
+                                <li><a href="./contact.html">Əlaqə</a></li>
+                            </ul>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-xl-3 col-md-6 col-12">
+                        <div class="footer-block">
+                            <h5 class="block-title">Faydalı linklər</h5>
+                            <ul class="nav-list">
+                                <li><a href="">Tez-tez soruşulanlar</a></li>
+                                <li><a href="./vacancy.html">Vakansiya</a></li>
+                                <li><a href="">Xidmət şəbəkəsi</a></li>
+                            </ul>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-xl-3 col-md-6 col-12">
+                        <div class="footer-block">
+                            <h5 class="block-title">Ünvan</h5>
+                            <ul class="address-list">
+                                <li><a href="https://www.google.com/maps?q=baki" target="_blank">
+                                        <i class="fa-solid fa-location-dot"></i> Azərbaycan, Bakı ş.,
+                                        Əhməd Rəcəbli 15, AZ1028
+                                    </a></li>
+                                <li><a href="tel:#3223"><i class="fas fa-phone"></i> (+994) 555 77 00
+                                    </a></li>
+                                <li><a href="mailto:baskent@info.az"><i
+                                            class="fa-solid fa-envelope"></i>baskent@info.az</a></li>
+
+                            </ul>
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="copyright text-center  pt-4">
+                    © 2022 | Bütün hüquqlar qorunur.
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer end -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+  
+   <script src="./js/script.js"></script>
+</body>
+
+</html>

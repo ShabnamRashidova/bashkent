@@ -1033,6 +1033,75 @@ input:focus {
           animation: animate 0.4s ease-in-out;
 }
 
+.vacancy-section .bottom-img {
+  margin-top: -37px !important;
+}
+.vacancy-section .section-title {
+  font-size: 25px;
+  color: #1A1A1A;
+}
+.vacancy-section .form-general {
+  padding: 30px;
+  margin-top: 40px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+}
+.vacancy-section .form-general .form-select {
+  border: none;
+  border-radius: 0;
+  padding-bottom: 10px;
+  color: #757782;
+  border-bottom: 1px solid #cdcdcd;
+}
+.vacancy-section .form-general .form-select:focus {
+  border-color: #ca3d26;
+  box-shadow: none !important;
+  outline: none !important;
+}
+.vacancy-section .form-general textarea {
+  width: 100%;
+  border-color: #cdcdcd;
+  font-size: 14px;
+  padding: 10px;
+  height: 130px;
+  outline: none;
+  margin-top: 30px;
+}
+.vacancy-section .form-general textarea:focus {
+  border-color: #ca3d26;
+}
+.vacancy-section .form-general .submit-btn {
+  margin-top: 20px;
+  background-color: #ca3d26;
+  color: #fff;
+  width: 120px;
+  height: 40px;
+}
+.vacancy-section .form-general .submit-btn:hover {
+  -webkit-animation: pulse-primary 1.3s infinite;
+          animation: pulse-primary 1.3s infinite;
+}
+.vacancy-section .form-general input {
+  border-bottom: 1px solid #cdcdcd;
+  padding-bottom: 10px;
+  width: 100%;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+.vacancy-section .form-general input:focus {
+  border-color: #ca3d26;
+}
+.vacancy-section .form-general input[type=file] {
+  display: none;
+}
+.vacancy-section .form-general .custom-file-upload {
+  border-bottom: 1px solid #cdcdcd;
+  padding-bottom: 10px;
+  color: #757782;
+  text-align: left;
+  width: 100%;
+  cursor: pointer;
+}
+
 @media screen and (max-width: 1200px) {
   .general-header .header-fixed {
     background-color: #fff;
