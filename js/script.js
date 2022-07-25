@@ -9,7 +9,7 @@ $('.banner-carousel').owlCarousel({
     animateOut: 'slideOutDown',
     animateIn: 'flipInX',
     items:1,
-
+    lazyLoad: true,
     smartSpeed:450,
     responsive: {
         0: {
@@ -28,12 +28,13 @@ $('.branches-carousel').owlCarousel({
     loop: false,
     margin: 20,
     responsiveClass: true,
+    lazyLoad: true,
     responsive: {
         0: {
             items: 1,
 
         },
-        600: {
+        800: {
             items: 2,
         },
         1000: {
@@ -46,6 +47,7 @@ $('.branches-carousel').owlCarousel({
 $('.partners-carousel').owlCarousel({
     loop: false,
     margin: 40,
+    lazyLoad: true,
     responsiveClass: true,
     responsive: {
         0: {
@@ -71,6 +73,7 @@ $('.blog-carousel').owlCarousel({
     margin: 20,
     responsiveClass: true,
     autoPlay: true,
+    lazyLoad: true,
     responsive: {
         0: {
             items: 1,
@@ -86,7 +89,7 @@ $('.blog-carousel').owlCarousel({
 $('.testimonial-carousel').owlCarousel({
     loop: false,
     margin: 40,
-
+    lazyLoad: true,
     responsiveClass: true,
     responsive: {
         0: {
@@ -136,8 +139,4 @@ $(window).on("scroll",function(){
    }
   
     
-})
-var lazyLoadInstance = new LazyLoad({
-    // Your custom settings go here
-  });
-  lazyLoadInstance.update();
+});

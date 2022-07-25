@@ -17,7 +17,7 @@ $font-14px: 14px;
 $font-15px: 15px;
 $font-22px: 22px;
 $transition: all 0.4s ease;
-$margin-50px: 50px;
+$margin-30px: 30px;
 
 @mixin center {
     display: flex;
@@ -61,7 +61,7 @@ body {
 }
 
 section {
-    margin-bottom: $margin-50px;
+    margin-bottom: $margin-30px;
 }
 
 ul {
@@ -361,7 +361,7 @@ input {
 
                         &.active,
                         &:hover {
-
+                            animation: pulse-primary 1.5s infinite;
                             background-color: $primary-color;
                         }
                     }
@@ -540,17 +540,22 @@ input {
     .link-about {
         background-color: $primary-color;
         color: $white;
-        padding: 5px 10px;
+      width: 110px;
+      display: block;
+      height: 40px;
+      @include center;
         border: 1px solid $primary-color;
         transition: $transition;
 
         &:hover {
-            background-color: $white;
-            color: $primary-color;
+            animation:pulse-primary 1.3s infinite;
         }
     }
 
     .about-image {
+        
+    
+
         height: 540px;
         background-size: cover;
         background-position: center;
@@ -617,19 +622,18 @@ input {
     }
 
     .single-item {
-        display: flex;
+       
+        @include center;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        height: 150px;
-
 
         .icon {
-            margin-bottom: 20px;
+            margin-bottom: 10px;
 
             img {
+                
+                height: 80px;
                 width: 80px;
+           
             }
         }
     }
@@ -677,18 +681,21 @@ input {
         overflow: hidden;
 
         .slider-item-img {
+            overflow: hidden;
+           img{
             transition: $transition;
 
             &:hover {
                 transform: scale(1.1);
             }
+           }
         }
 
         .slider-item-title {
             position: absolute;
             bottom: 30px;
             left: 30px;
-            font-size: $font-22px;
+            font-size: $font-18px;
             color: $white;
             font-weight: 600;
         }
@@ -904,15 +911,16 @@ input {
 
     .partners-carousel {
         .slider-item {
-            border: 1px solid #ddd;
-            padding: 0 20px;
+            // border: 1px solid #ddd;
+            background-color: #fff;
+           
             @include center;
-            border-radius: 10px;
-
-
-            a {
+           
+            a { 
                 img {
+                    height: 120px;
                    
+                    object-fit: cover;
                     width: 100%;
 
                   
@@ -1121,8 +1129,8 @@ input {
 
                 select {
                     margin-bottom: 20px;
-                   
-                    padding-bottom: 10px;
+                   color: #828482;
+                    padding:0 0 10px 0;
                      width: 100%;
                      display: inline-block;
                      margin-bottom: 20px;
@@ -1374,7 +1382,7 @@ input{
 .gallery {
 
     .product-item {
-        .card {
+        a {
             position: relative;
 
             i {
@@ -1392,6 +1400,13 @@ input{
                 transition: $transition;
                 animation: pulse-primary 1.3s infinite;
 
+            }
+            img{
+                width: 100%;
+                height: 250px;
+                margin-bottom: 20px;
+                object-fit: cover;
+                border-radius: 5px;
             }
         }
 
@@ -1755,7 +1770,16 @@ margin-top: 30px;
             }
         }
     }
-
+    .banner-section {
+        .slide-content {
+            h1 {
+                font-size: 45px !important;  
+            }
+            button {     
+                font-size: $font-15px;
+            }
+        }
+    }
     .testimonial-section {
         padding: 100px 0 170px;
 
@@ -1829,6 +1853,23 @@ margin-top: 30px;
             }
 
         }
+    }
+    .general-footer {
+      text-align: center;
+
+        .footer-top {
+            .footer-logo {
+                img {
+                    width: 200px;
+                }
+            }
+
+            .footer-social-list {
+                justify-content: center;
+            }
+        }
+
+
     }
 }
 
@@ -1993,23 +2034,7 @@ margin-top: 30px;
         }
     }
 
-    .general-footer {
-        text-align: center;
 
-        .footer-top {
-            .footer-logo {
-                img {
-                    width: 200px;
-                }
-            }
-
-            .footer-social-list {
-                justify-content: center;
-            }
-        }
-
-
-    }
 }
 
 @media screen and (max-width:424px) {
