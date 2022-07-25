@@ -625,16 +625,20 @@ input {
        
         @include center;
         flex-direction: column;
-
         .icon {
-            margin-bottom: 10px;
 
-            img {
-                
-                height: 80px;
-                width: 80px;
-           
-            }
+            border-radius: 50%;            margin-bottom: 10px;
+            background-color: #fff;   
+            width: 120px;
+            height: 120px;    
+            @include center;
+            flex-direction: column;
+            
+img{
+
+width: 65%;
+
+}
         }
     }
 }
